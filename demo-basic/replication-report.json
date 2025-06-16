@@ -1,0 +1,52 @@
+{
+  "replicationId": "1749836875874-l0rpil7s0",
+  "url": "https://www.theatlantic.com/ideas/archive/2025/06/israel-iran-war/683160/",
+  "outputPath": "./demo-basic",
+  "startTime": "2025-06-13T17:47:55.874Z",
+  "endTime": "2025-06-13T17:48:05.856Z",
+  "duration": {
+    "ms": 9982,
+    "seconds": 10,
+    "minutes": 0
+  },
+  "pageInfo": {
+    "title": "Israel’s Bold, Risky Attack - The Atlantic",
+    "htmlSize": 96293,
+    "hasScreenshot": true
+  },
+  "assets": {
+    "detected": 80,
+    "breakdown": {
+      "images": 12,
+      "stylesheets": 7,
+      "scripts": 24,
+      "fonts": 0,
+      "videos": 0,
+      "audio": 0,
+      "iframes": 0,
+      "links": 36,
+      "forms": 1,
+      "inlineStyles": 0,
+      "inlineScripts": 0
+    }
+  },
+  "download": {
+    "total": 80,
+    "completed": 80,
+    "failed": 0,
+    "bytes": 7683070
+  },
+  "errors": {
+    "totalErrorTypes": 0,
+    "errorsLastHour": 0,
+    "errorsLastDay": 0,
+    "errorCounts": {},
+    "circuitBreakerStates": {
+      "page_extraction": {
+        "state": "CLOSED",
+        "failures": 0
+      }
+    }
+  },
+  "success": true
+}

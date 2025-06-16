@@ -1,0 +1,61 @@
+{
+  "name": "gist-website-replicator",
+  "version": "1.0.0",
+  "description": "Advanced website replication engine for Gist.ai",
+  "main": "src/index.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "node server.js",
+    "server": "node server.js",
+    "web": "node server.js",
+    "replicate": "node src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "health": "node src/index.js health",
+    "build": "docker build -t gist-replicator .",
+    "dev": "nodemon server.js"
+  },
+  "bin": {
+    "gist-replicator": "./src/index.js"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "axios": "^1.5.0",
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^11.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "fs-extra": "^11.1.1",
+    "lodash": "^4.17.21",
+    "mime-types": "^2.1.35",
+    "playwright": "^1.40.0",
+    "puppeteer": "^21.0.0",
+    "sharp": "^0.32.6",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "web-scraping",
+    "website-replication",
+    "puppeteer",
+    "playwright",
+    "gist.ai"
+  ],
+  "author": "Gist.ai Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gist-ai/website-replicator.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

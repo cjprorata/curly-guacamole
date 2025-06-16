@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v21.8 (Yoast SEO v25.1) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>WTF is sell-side decisioning? - Digiday</title>
+	<link rel="canonical" href="https://digiday.com/media/wtf-is-sell-side-decisioning-2/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="WTF is sell-side decisioning?" />
+	<meta property="og:description" content="With programmatic processes speeding up, publishers and SSPs can do more merchandising of impressions before they are put up for auction through sell-side decisioning tactics." />
+	<meta property="og:url" content="https://digiday.com/media/wtf-is-sell-side-decisioning-2/" />
+	<meta property="og:site_name" content="Digiday" />
+	<meta property="article:publisher" content="https://www.facebook.com/digiday/" />
+	<meta property="article:published_time" content="2025-06-12T15:00:00+00:00" />
+	<meta property="og:image" content="https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg" />
+	<meta property="og:image:width" content="1280" />
+	<meta property="og:image:height" content="720" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Tim Peterson" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@digiday" />
+	<meta name="twitter:site" content="@digiday" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Tim Peterson" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#article","isPartOf":{"@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/"},"author":{"name":"Tim Peterson","@id":"https://digiday.com/#/schema/person/b1d623b1a50ca2eace69f7cab130c3d9"},"headline":"WTF is sell-side decisioning?","datePublished":"2025-06-12T15:00:00+00:00","mainEntityOfPage":{"@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/"},"wordCount":170,"publisher":{"@id":"https://digiday.com/#organization"},"image":{"@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#primaryimage"},"thumbnailUrl":"https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg","articleSection":["Media"],"inLanguage":"en-US","copyrightYear":"2025","copyrightHolder":{"@id":"https://digiday.com/#organization"}},{"@type":"WebPage","@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/","url":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/","name":"WTF is sell-side decisioning? - Digiday","isPartOf":{"@id":"https://digiday.com/#website"},"primaryImageOfPage":{"@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#primaryimage"},"image":{"@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#primaryimage"},"thumbnailUrl":"https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg","datePublished":"2025-06-12T15:00:00+00:00","breadcrumb":{"@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://digiday.com/media/wtf-is-sell-side-decisioning-2/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#primaryimage","url":"https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg","contentUrl":"https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg","width":1280,"height":720},{"@type":"BreadcrumbList","@id":"https://digiday.com/media/wtf-is-sell-side-decisioning-2/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://digiday.com/"},{"@type":"ListItem","position":2,"name":"WTF is sell-side decisioning?"}]},{"@type":"WebSite","@id":"https://digiday.com/#website","url":"https://digiday.com/","name":"Digiday","description":"Digital Content, Digital Advertising, Digital Marketing","publisher":{"@id":"https://digiday.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://digiday.com/search?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://digiday.com/#organization","name":"Digiday","url":"https://digiday.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://digiday.com/#/schema/logo/image/","url":"https://digiday.com/wp-content/uploads/sites/3/2017/06/Digiday_logo.png","contentUrl":"https://digiday.com/wp-content/uploads/sites/3/2017/06/Digiday_logo.png","width":1814,"height":1018,"caption":"Digiday"},"image":{"@id":"https://digiday.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/digiday/","https://x.com/digiday","https://www.instagram.com/digiday/","https://www.linkedin.com/company/digiday/","https://en.wikipedia.org/wiki/Digiday"]},{"@type":"Person","@id":"https://digiday.com/#/schema/person/b1d623b1a50ca2eace69f7cab130c3d9","name":"Tim Peterson","url":"https://digiday.com/author/timdigiday-com/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.lightboxcdn.com' />
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//js.createsend1.com' />
+<link rel='dns-prefetch' href='//experience.tinypass.com' />
+<link rel='dns-prefetch' href='//cdn.viafoura.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Digiday &raquo; Feed" href="https://digiday.com/feed/" />
+<link rel='stylesheet' id='all-css-0' href='https://digiday.com/_static/??-eJyNi0sOgzAMBS/UxKQgwqbqWfIDWRgTxUFVbl9QparLLufNG3hlFXauiStkOhZkARcVuZaKQJAfUnHO+lxu8H/z/SMHOmL66IhSwdMeVkXoiysNpDZKekO+iuf2MHawfTeZ8f4GOsQ6yg==' type='text/css' media='all' />
+<style id='wp-parsely-recommendations-style-inline-css'>
+.parsely-recommendations-list-title{font-size:1.2em}.parsely-recommendations-list{list-style:none;padding:unset}.parsely-recommendations-cardbody{overflow:hidden;padding:.8em;text-overflow:ellipsis;white-space:nowrap}.parsely-recommendations-cardmedia{padding:.8em .8em 0}
+
+</style>
+<link rel='stylesheet' id='all-css-2' href='https://digiday.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpqbmBmYGBhZmAAARKou3w==' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='elasticpress-facet-style-inline-css'>
+.widget_ep-facet input[type=search],.wp-block-elasticpress-facet input[type=search]{margin-bottom:1rem}.widget_ep-facet .searchable .inner,.wp-block-elasticpress-facet .searchable .inner{max-height:20em;overflow:scroll}.widget_ep-facet .term.hide,.wp-block-elasticpress-facet .term.hide{display:none}.widget_ep-facet .empty-term,.wp-block-elasticpress-facet .empty-term{opacity:.5;position:relative}.widget_ep-facet .empty-term:after,.wp-block-elasticpress-facet .empty-term:after{bottom:0;content:" ";display:block;left:0;position:absolute;right:0;top:0;width:100%;z-index:2}.widget_ep-facet .level-1,.wp-block-elasticpress-facet .level-1{padding-left:20px}.widget_ep-facet .level-2,.wp-block-elasticpress-facet .level-2{padding-left:40px}.widget_ep-facet .level-3,.wp-block-elasticpress-facet .level-3{padding-left:60px}.widget_ep-facet .level-4,.wp-block-elasticpress-facet .level-4{padding-left:5pc}.widget_ep-facet .level-5,.wp-block-elasticpress-facet .level-5{padding-left:75pt}.widget_ep-facet input[disabled],.wp-block-elasticpress-facet input[disabled]{cursor:pointer;opacity:1}.widget_ep-facet .term a,.wp-block-elasticpress-facet .term a{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative}.widget_ep-facet .term a:hover .ep-checkbox,.wp-block-elasticpress-facet .term a:hover .ep-checkbox{background-color:#ccc}.ep-checkbox{-webkit-box-align:center;-ms-flex-align:center;-ms-flex-negative:0;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;background-color:#eee;display:-webkit-box;display:-ms-flexbox;display:flex;flex-shrink:0;height:1em;justify-content:center;margin-right:.25em;width:1em}.ep-checkbox:after{border:solid #fff;border-width:0 .125em .125em 0;content:"";display:none;height:.5em;-webkit-transform:rotate(45deg);transform:rotate(45deg);width:.25em}.ep-checkbox.checked{background-color:#5e5e5e}.ep-checkbox.checked:after{display:block}
+
+</style>
+<link rel='stylesheet' id='all-css-6' href='https://digiday.com/wp-content/mu-plugins/search/elasticpress/dist/css/related-posts-block-styles.min.css?m=1748964495g' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='all-css-10' href='https://digiday.com/_static/??-eJy1kd0OQTEMgF/ITgnBjXiWZisaXXdyulm8vcVfEBci3Lb9+vUHau980kyaIe8okkHgLQc8glJ1ljGzB28Gm1ZlThIGGrrI2rXgCD7GzQ9E+hbspWxZ76SLFBidUq5p2LtLFlg9xBSKNEXPqAnQjLKdm/d4rCjirh1+Y6FDw+xRk6p05y27QBsskv8p8jikYiRPjoZJCXSpCmg7blb7foyHB90yLzdcx9VkMVtMx8vJfHYCW3jSXw==' type='text/css' media='all' />
+
+	<!-- dataLayer variable -->
+	<script>var dataLayer = window.dataLayer || []; dataLayer.push({"postDetails":{"publishDate":"2025\/06\/12","author":"Tim Peterson","tags":[],"categories":["Media"],"hotTopics":["The Programmatic Publisher"],"series":["WTF Series"]}});</script>
+
+	<!-- Google Tag Manager script -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-K62HL6S');</script>
+
+	<script type="text/javascript" id="ad-layers-dfp-js-extra">
+/* <![CDATA[ */
+var adLayersDFP = {"layerDebugLabel":"Current ad layer","consoleDebugLabel":"Switch to Google console","adUnitPrefix":"div-gpt-ad-"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="ad-layers-js-extra">
+/* <![CDATA[ */
+var adLayersAdServer = {"jsAPIClass":"AdLayersDFPAPI"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSqy4uT8vJLUvBL9gpzS9My8Yv3EFN2cxMrUIrBuOEc3Ja2ANB1A1fa5tobmJubGBhaGZkZZAN8+Ra4=" ></script><script type="text/javascript" defer="defer" async="async" src="https://www.lightboxcdn.com/vendor/5a9c5a6f-b8c1-47bb-829a-55322a8adccd/lightbox_speed.js" id="digioh-low-impact-js"></script>
+<script type="text/javascript" id="piano-integration-js-extra">
+/* <![CDATA[ */
+var pianoSettings = {"aid":"6LaRkvUre6","sandbox":"","debug":"","env":"production","rids":{"plus":null},"rest_endpoints":{"term_info":"https:\/\/digiday.com\/wp-json\/piano\/v1\/term\/info","admin_base":"https:\/\/digiday.ddm.vipdev.lndo.site\/wp-admin\/admin-ajax.php"},"deepDive":"1","brand":"digiday"};
+var tag_vars = {"post_tags":"programmatic-publisher,media,wtf,article"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/wp-content/plugins/digiday-media-network-plugin/inc/modules/piano/assets/js/piano-integration.min.js?m=1747308163g" ></script><script type="text/javascript" defer="defer" src="https://experience.tinypass.com/xbuilder/experience/load?aid=6LaRkvUre6&amp;ver=2.1" id="tinypass-js"></script>
+<script type="text/javascript" defer="defer" src="//cdn.viafoura.net/entry/index.js?ver=9.11.1" id="viafoura-cdn-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" defer="defer" src="https://www.googletagmanager.com/gtag/js?id=G-SVGCV3Q0XS" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["digiday.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-SVGCV3Q0XS", {"googlesitekit_post_type":"post"});
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); } 
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Stream WordPress user activity plugin v4.1.1 -->
+<meta name="msvalidate.01" content="36BBCBBC8FB6F9263E98BDCC0E4879E2" /><meta name="google-site-verification" content="nh_stEEi0bDvS_eKTuH4hS7OC0cMFz9Au1O10t4Sy8M" /><meta name="generator" content="Site Kit by Google 1.152.1" />	<style>img#wpstats{display:none}</style>
+		<script type="application/ld+json" class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"WTF is sell-side decisioning?","url":"http:\/\/digiday.com\/media\/wtf-is-sell-side-decisioning-2\/","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/digiday.com\/media\/wtf-is-sell-side-decisioning-2\/"},"thumbnailUrl":"https:\/\/digiday.com\/wp-content\/uploads\/sites\/3\/2025\/06\/WTF_SellSideDecisioning-thumbnail.jpg?w=150&h=150&crop=1","image":{"@type":"ImageObject","url":"https:\/\/digiday.com\/wp-content\/uploads\/sites\/3\/2025\/06\/WTF_SellSideDecisioning-thumbnail.jpg"},"articleSection":"Media","author":[{"@type":"Person","name":"Tim Peterson"}],"creator":["Tim Peterson"],"publisher":{"@type":"Organization","name":"Digiday","logo":"https:\/\/digiday.com\/wp-content\/uploads\/sites\/3\/2018\/01\/digiday-email-logo.png"},"keywords":["The Programmatic Publisher","WTF Series"],"dateCreated":"2025-06-12T15:00:00Z","datePublished":"2025-06-12T15:00:00Z","dateModified":"2025-06-12T15:00:00Z"}</script>	<link rel="apple-touch-icon" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-180x180.png" />
+
+	<link rel="apple-touch-icon-precomposed" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-180x180.png" />
+
+	<link rel="manifest" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/manifest.json">
+	<link rel="mask-icon" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/safari-pinned-tab.svg" color="#000000">
+	<meta name="apple-mobile-web-app-title" content="Digiday">
+	<meta name="application-name" content="Digiday">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="shortcut icon" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-96x96.png" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-48x48.png" sizes="48x48" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-128.png" sizes="128x128" />
+
+	<meta name="apple-mobile-web-app-title" content="Digiday" />
+	<meta name="msapplication-config" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/browserconfig.xml">
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-310x310.png" />
+
+								<script type='text/javascript'>
+				var dfpAdUnits = {};
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+				})();
+				</script>
+									<script type="text/javascript">
+			var dfpBuiltMappings = {}, dfpAdUnits = {};
+			googletag.cmd.push(function() {
+				dfpBuiltMappings["web_leaderboard"] = googletag.sizeMapping().addSize([1400,1],[[970,90],[970,250]]).addSize([992,1],[[970,90],[970,250]]).addSize([740,1],[[728,90],[970,90]]).addSize([1,1],[[970,90],[300,50],[320,50]]).build();
+dfpBuiltMappings["web_bfu"] = googletag.sizeMapping().addSize([1400,1],[[1440,706]]).addSize([992,1],[[320,640]]).addSize([740,1],[[320,640]]).addSize([1,1],[[320,640]]).build();
+dfpBuiltMappings["web_rightrail_pos1"] = googletag.sizeMapping().addSize([1400,1],[[300,600]]).addSize([992,1],[[300,600]]).addSize([740,1],[[300,600]]).addSize([1,1],[[300,600]]).build();
+dfpBuiltMappings["web_rightrail_pos2"] = googletag.sizeMapping().addSize([1400,1],[[300,250]]).addSize([992,1],[[300,250]]).addSize([740,1],[[300,250]]).addSize([1,1],[[300,250]]).build();
+dfpBuiltMappings["web_incontent_pos1"] = googletag.sizeMapping().addSize([1400,1],[[300,250]]).addSize([992,1],[[300,250]]).addSize([740,1],[[320,50]]).addSize([1,1],[[320,50],[300,50]]).build();
+dfpAdUnits["web_leaderboard"] = googletag.defineSlot("\/77046769\/digiday.com\/web_leaderboard",[970,90],"div-gpt-ad-web_leaderboard").defineSizeMapping(dfpBuiltMappings["web_leaderboard"]).setTargeting("topics",["programmatic-publisher"]).setTargeting("series",["wtf"]).setTargeting("categories",["media"]).setTargeting("aid",[580735]).setTargeting("author",["Tim Peterson"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+dfpAdUnits["web_bfu"] = googletag.defineSlot("\/77046769\/digiday.com\/web_bfu",[1440,706],"div-gpt-ad-web_bfu").defineSizeMapping(dfpBuiltMappings["web_bfu"]).setTargeting("topics",["programmatic-publisher"]).setTargeting("series",["wtf"]).setTargeting("categories",["media"]).setTargeting("aid",[580735]).setTargeting("author",["Tim Peterson"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+dfpAdUnits["web_rightrail_pos2"] = googletag.defineSlot("\/77046769\/digiday.com\/web_rightrail_pos2",[300,250],"div-gpt-ad-web_rightrail_pos2").defineSizeMapping(dfpBuiltMappings["web_rightrail_pos2"]).setTargeting("topics",["programmatic-publisher"]).setTargeting("series",["wtf"]).setTargeting("categories",["media"]).setTargeting("aid",[580735]).setTargeting("author",["Tim Peterson"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+dfpAdUnits["web_rightrail_pos1"] = googletag.defineSlot("\/77046769\/digiday.com\/web_rightrail_pos1",[300,600],"div-gpt-ad-web_rightrail_pos1").defineSizeMapping(dfpBuiltMappings["web_rightrail_pos1"]).setTargeting("topics",["programmatic-publisher"]).setTargeting("series",["wtf"]).setTargeting("categories",["media"]).setTargeting("aid",[580735]).setTargeting("author",["Tim Peterson"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+dfpAdUnits["web_incontent_pos1"] = googletag.defineSlot("\/77046769\/digiday.com\/web_incontent_pos1",[300,250],"div-gpt-ad-web_incontent_pos1").defineSizeMapping(dfpBuiltMappings["web_incontent_pos1"]).setTargeting("topics",["programmatic-publisher"]).setTargeting("series",["wtf"]).setTargeting("categories",["media"]).setTargeting("aid",[580735]).setTargeting("author",["Tim Peterson"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+googletag.pubads().setTargeting("topics",["programmatic-publisher"]).setTargeting("series",["wtf"]).setTargeting("categories",["media"]).setTargeting("aid",[580735]).setTargeting("author",["Tim Peterson"]).setTargeting("environment",["production"]);
+	googletag.pubads().setTargeting( 'breakpoint', ( window.innerWidth < 992 ) ? 'mobile' : 'desktop' );
+	googletag.pubads().addEventListener('slotOnload', function(event) {
+		var slot = event.slot;
+		document.getElementById(slot.getSlotElementId()).classList.add("advertisement-label");
+	});
+	googletag.pubads().enableAsyncRendering();
+googletag.pubads().enableLazyLoad({renderMarginPercent: 0, fetchMarginPercent: 0});
+googletag.pubads().enableSingleRequest();
+
+				if ( typeof AdLayersAPI === 'undefined' || ! AdLayersAPI.isDebug() ) {
+					googletag.enableServices();
+				}
+			});
+						var dfpSizeMapping = {"web_leaderboard":[[[1400,1],[[970,90],[970,250]]],[[992,1],[[970,90],[970,250]]],[[740,1],[[728,90],[970,90]]],[[1,1],[[970,90],[300,50],[320,50]]]],"web_bfu":[[[1400,1],[[1440,706]]],[[992,1],[[320,640]]],[[740,1],[[320,640]]],[[1,1],[[320,640]]]],"web_rightrail_pos1":[[[1400,1],[[300,600]]],[[992,1],[[300,600]]],[[740,1],[[300,600]]],[[1,1],[[300,600]]]],"web_rightrail_pos2":[[[1400,1],[[300,250]]],[[992,1],[[300,250]]],[[740,1],[[300,250]]],[[1,1],[[300,250]]]],"web_incontent_pos1":[[[1400,1],[[300,250]]],[[992,1],[[300,250]]],[[740,1],[[320,50]]],[[1,1],[[320,50],[300,50]]]]};
+			var dfpAdLayer = {"post_id":180789,"title":"Post Layer"};
+			var dfpAdDetails = {"web_leaderboard":{"path":"\/77046769\/digiday.com\/web_leaderboard","sizes":[970,90],"targeting":{"topics":["programmatic-publisher"],"series":["wtf"],"categories":["media"],"aid":[580735],"author":["Tim Peterson"],"environment":["production"]}},"web_bfu":{"path":"\/77046769\/digiday.com\/web_bfu","sizes":[1440,706],"targeting":{"topics":["programmatic-publisher"],"series":["wtf"],"categories":["media"],"aid":[580735],"author":["Tim Peterson"],"environment":["production"]}},"web_rightrail_pos2":{"path":"\/77046769\/digiday.com\/web_rightrail_pos2","sizes":[300,250],"targeting":{"topics":["programmatic-publisher"],"series":["wtf"],"categories":["media"],"aid":[580735],"author":["Tim Peterson"],"environment":["production"]}},"web_rightrail_pos1":{"path":"\/77046769\/digiday.com\/web_rightrail_pos1","sizes":[300,600],"targeting":{"topics":["programmatic-publisher"],"series":["wtf"],"categories":["media"],"aid":[580735],"author":["Tim Peterson"],"environment":["production"]}},"web_incontent_pos1":{"path":"\/77046769\/digiday.com\/web_incontent_pos1","sizes":[300,250],"targeting":{"topics":["programmatic-publisher"],"series":["wtf"],"categories":["media"],"aid":[580735],"author":["Tim Peterson"],"environment":["production"]}}};
+			</script>
+			
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-T6CCXQZ5' );
+			
+/* ]]> */
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<link rel="icon" href="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=180" />
+<meta name="msapplication-TileImage" content="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=270" />
+		<style type="text/css" id="wp-custom-css">
+			.network-event-quotes-section {
+    background-color: #00042d;
+}
+
+.network-event-quotes-section .er-testimonials-slider-wrapper .er-testimonials-slider .item {
+    background-color: #00042d;
+}		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-580735 single-format-standard wp-embed-responsive digiday tp-level-false">
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K62HL6S"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>		<div class="ad_960">
+            <div class="leaderboard_center">
+				<div id="div-gpt-ad-web_leaderboard" class="dfp-ad dfp-web_leaderboard" data-ad-unit="web_leaderboard">
+					<script type="text/javascript">
+						if ( "undefined" !== typeof googletag ) {
+							googletag.cmd.push( function() { googletag.display("div-gpt-ad-web_leaderboard"); } );
+						}
+					</script>
+				</div>            </div>
+		</div>
+				<div class="wrapper	">
+			<div id="content" class="site-content">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main" role="main">
+						<div id="header" class="" >
+	<div id="sticky-header-wrapper">
+		<nav class="" id="site-navigation">
+			<div class="nav-wrapper top-head">
+				<div class="top_row">
+					<div class="left">
+						<a class="icon btn_menu" href="#" title="">
+							<div></div>
+							<div></div>
+							<div></div>
+						</a>
+
+						<a class="icon logo-mobile mobile-visible" href="https://digiday.com/">
+							<img alt="Digiday" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/digiday_logo.svg">
+						</a>
+
+
+						<div class="search_wrapper desktop-visible">
+							<form action="https://digiday.com/search/" class="search-form" method="get" role="search">
+								<input type="search" class="input_search" placeholder="Search &hellip;" value="" name="s" size="30"/>
+							</form>
+							<a class="icon btn_search" href="#">
+								<img class="icon-search" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_search.svg" alt="Search">
+								<img class="icon-close" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_close-black-alt.svg" alt="Close Search">
+							</a>
+						</div>
+
+						
+					</div>
+
+					<a class="icon logo desktop-visible" href="https://digiday.com/">
+						<img src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/digiday_logo.svg" alt="Digiday">
+					</a>
+
+
+
+					<div class="right">
+						<a class="icon subscribe_envelope desktop-visible" href="https://digiday.com/newsletters/" title="Subscribe">
+							<img alt="Digiday" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_envelope-black.svg">
+						</a>
+						
+						<div class="tinypass-menu">
+							<div class="logged-out nav-logged-out">
+								<a class="subscribe"
+									href="https://digiday.com/subscribe/?utm_source=digiday.com&#038;utm_medium=direct&#038;utm_campaign=digidaydis&#038;subscribe_button">Subscribe</a> |
+								<a class="login tp-login-button" href="#">Login</a>
+							</div>
+							<div class="logged-in nav-logged-in">
+								<!-- Nicer arrow coming -->
+								<a class="menu_toggle dropdown-toggle" href="#"><span>Reader</span></a>
+								<ul class="my_menu nav-dropdown-menu">
+									<li class="who member-title">
+                                        <span class="avatar"></span>
+                                        <span class="full-name"></span>
+                                        <span class="tp-hide-if-free">Digiday+ Member</span>
+                                        <a class="nav-subscribe tp-hide-if-paid" href="/subscribe"><span>Subscribe Now</span></a>
+                                    </li>
+									<li class="plus"><a href="/plus">Digiday+ homepage</a></li>
+									<li><a href="/frequently-asked-questions/">FAQ</a></li>
+									<li><a href="/my-account/" class="account-overview">Account Overview</a></li>
+									<li><a href="" class="logout tp-logout-button">Logout</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				
+					
+                    <div class="bottom_row">
+                        <a class="btn_dropdown" href="#">News</a>
+                        <a href="https://digiday.com/plus/">Digiday +</a>
+<a href="/podcasts/">Podcasts</a>
+<a href="/events">Events</a>
+<a href="/awards/">Awards</a>
+                    </div>
+							</div>
+
+			<div class="mobile_menu">
+				<div class="mobile_menu_wrapper">
+					<div class="close">
+						<a href="#" class="btn_close"><img src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_close-white.svg"></a>
+					</div>
+					<div class="sections">
+						<div class="section nav-sections">
+							<ul id="menu-main-menu-1" class="menu"><li><a href="/">News</a></li><li class="menu-nav_pulse menu-item menu-item-type-custom menu-item-object-custom menu-item-223951"><a href="https://digiday.com/plus/">Digiday +</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-276493"><a href="/podcasts/">Podcasts</a></li>
+<li class="menu-nav_events menu-item menu-item-type-custom menu-item-object-custom menu-item-223952"><a href="/events">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249063"><a href="/awards/">Awards</a></li>
+</ul>
+							<div class="mobile_search">
+								<form role="search" method="get" action="https://digiday.com/search/">
+									<div class="search-wrapper">
+										<input type="text" placeholder="Search" value="" name="s" size="30"/>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="section nav-hot-topics">
+							<h4>Hot Topics</h4>
+							<ul id="menu-hot-topic-menu" class="menu"><li id="menu-item-475391" class="menu-item menu-item-type-taxonomy menu-item-object-topics current-post-ancestor current-menu-parent current-post-parent menu-item-475391"><a href="https://digiday.com/topic/programmatic-publisher/">The Programmatic Publisher</a></li>
+<li id="menu-item-475396" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475396"><a href="https://digiday.com/topic/programmatic-luxury/">The Programmatic Marketer</a></li>
+<li id="menu-item-475390" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475390"><a href="https://digiday.com/topic/marketing-on-platforms/">Marketing on Platforms</a></li>
+<li id="menu-item-475392" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475392"><a href="https://digiday.com/topic/life-beyond-the-cookie/">Life Beyond the Cookie</a></li>
+<li id="menu-item-475394" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475394"><a href="https://digiday.com/topic/brands-in-culture/">Brands in Culture</a></li>
+<li id="menu-item-475395" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475395"><a href="https://digiday.com/topic/gaming-esports/">Gaming &amp; Esports</a></li>
+<li id="menu-item-475398" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475398"><a href="https://digiday.com/topic/modern-newsroom/">Modern Newsroom</a></li>
+<li id="menu-item-479499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-479499"><a href="/topics/">All Topics</a></li>
+</ul>						</div>
+
+						<div class="section nav-categories">
+							<div class="tinypass-menu">
+								<div class="logged-out tp-hide-if-subscriber">
+									<a href="#" class="login tp-login-button">Login</a>
+									<a href="https://digiday.com/subscribe/" class="subscribe">Subscribe</a>
+								</div>
+								<div class="logged-in tp-hide-if-guest">
+									<a href="/my-account/" class="account-overview">My Account</a>
+									<a href="#" class="logout tp-logout-button">Logout</a>
+								</div>
+							</div>
+
+							<div class="mm"><ul id="menu-main-dropdown-rt" class="menu"><li id="menu-item-483405" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483405"><a href="https://digiday.com/series/special-projects/">Special Projects</a></li>
+<li id="menu-item-483404" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483404"><a href="https://digiday.com/series/research/">Digiday+ Research</a></li>
+<li id="menu-item-483406" class="menu-item menu-item-type-taxonomy menu-item-object-series current-post-ancestor current-menu-parent current-post-parent menu-item-483406"><a href="https://digiday.com/series/wtf/">WTF Series</a></li>
+<li id="menu-item-522346" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-522346"><a href="/newsletters/">Newsletters</a></li>
+</ul></div>						</div>
+					</div>
+				</div>
+			</div> <!-- .mobile-menu -->
+
+			<div class="dropdown-content">
+				<div class="drop-wrapper dropdown_wrapper">
+											<div class="feature_story">
+															<div>
+									<img width="160" height="100" src="https://digiday.com/wp-content/uploads/sites/3/2022/02/Image-from-iOS-2.gif?w=160&amp;h=100&amp;crop=1" class="attachment-nav_feature_story size-nav_feature_story wp-post-image" alt="HIRING GIF american flag" decoding="async" />								</div>
+														<a href="https://digiday.com/marketing/ai-screenings-budget-cuts-and-burnout-whats-really-behind-advertisings-hiring-disconnect/" title="AI screenings, budget cuts, and burnout: What’s really behind advertising&#8217;s hiring disconnect">
+								AI screenings, budget cuts, and burnout: What’s really behind advertising&#8217;s hiring disconnect							</a>
+						</div>
+					
+					<div class="hot-topics"><ul id="menu-main-dropdown-right" class="menu"><li id="menu-item-223961" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-223961"><a href="https://digiday.com/media/">Media</a></li>
+<li id="menu-item-223960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-223960"><a href="https://digiday.com/marketing/">Marketing</a></li>
+<li id="menu-item-479498" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-479498"><a href="https://digiday.com/media-buying/">Media Buying</a></li>
+<li id="menu-item-362952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-362952"><a href="https://digiday.com/future-of-tv/">Future of TV</a></li>
+<li id="menu-item-461928" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-461928"><a href="https://digiday.com/es/">Español</a></li>
+</ul></div><div class="mm"><ul id="menu-main-dropdown-rt-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483405"><a href="https://digiday.com/series/special-projects/">Special Projects</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483404"><a href="https://digiday.com/series/research/">Digiday+ Research</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-series current-post-ancestor current-menu-parent current-post-parent menu-item-483406"><a href="https://digiday.com/series/wtf/">WTF Series</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-522346"><a href="/newsletters/">Newsletters</a></li>
+</ul></div>				</div><!-- .drop-wrapper -->
+			</div><!-- .dropdown-content -->
+		</nav>
+	</div>
+	</div>
+
+<div id="article-wrapper">
+	
+<div class="article-name-block">
+	<div class="article-name-block-wrapper">
+				<div class="article-title-block post">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/series/wtf/">WTF Series</a></div>			<h1>
+                WTF is sell-side decisioning?			</h1>
+			<div class="article-info"><span class="author">By <a href='https://digiday.com/author/timdigiday-com/'>Tim Peterson</a></span> &nbsp;&bull;&nbsp; <span class="date">June 12, 2025</span> &nbsp;&bull;<div id="social-share-icons" class="">
+	<ul>
+									<li><a target="popup" title="Share in Facebook" onclick="window.open('https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri=','popup','width=600,height=600'); return false;" href="https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri="><span class="dashicons dashicons-facebook">Facebook</span></a></li>
+						<li><a target="popup" title="Share in Twitter" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=WTF%20is%20sell-side%20decisioning%3F','popup','width=600,height=600'); return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=WTF%20is%20sell-side%20decisioning%3F"><span class="dashicons dashicons-twitter">Twitter</span></a></li>
+			<li><a target="popup" title="Share in LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=WTF%20is%20sell-side%20decisioning%3F','popup','width=600,height=600'); return false;" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=WTF%20is%20sell-side%20decisioning%3F"><span class="dashicons dashicons-linkedin">LinkedIn</span></a></li>
+			<li><a target="popup" title="Share in Reddit" onclick="window.open('http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=WTF%20is%20sell-side%20decisioning%3F','popup','width=600,height=600'); return false;" href="http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=WTF%20is%20sell-side%20decisioning%3F"><span class="dashicons dashicons-reddit">Reddit</span></a></li>
+			</ul>
+</div>
+
+
+
+
+
+
+
+
+</div>		</div>
+        <div class="article-featured-art">
+            <img width="1030" height="579" src="https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?w=1030&amp;h=579&amp;crop=1" class="article-featured wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg 1280w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=300,170 300w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=1024,576 1024w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=640,360 640w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=265,150 265w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=749,422 749w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=320,180 320w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=215,122 215w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=230,130 230w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=1030,579 1030w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=760,428 760w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=290,163 290w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=180,100 180w, https://digiday.com/wp-content/uploads/sites/3/2025/06/WTF_SellSideDecisioning-thumbnail.jpg?resize=470,264 470w" sizes="(max-width: 1030px) 100vw, 1030px" />        </div>
+    </div>
+</div>
+	<div class="article article-columns-wrapper ">
+		<div class="content-column-wrapper">
+			<div class="content-column">
+				<div class="series-note"><p>This article is a WTF explainer, in which we break down media and marketing&#8217;s most confusing terms. <a href="https://digiday.com/series/wtf/">More from the series &rarr;</a></p></div>
+<p><em>This video is sponsored by Index Exchange. For more information about sell-side decisioning, <a href="https://digiday.com/sponsored/wtf-is-sell-side-decisioning/">check out this report</a>.</em></p>
+
+
+
+<p>A lot of decisions are made between the time someone shows up on a website and when an ad loads on the page. But many of those decisions are left up to advertisers and the demand-side platforms they deploy to do their programmatic ad buying. Fewer decisions are made by publishers and the supply-side platforms they use to sell impressions.</p>
+<div id="piano-meter-offer">
+
+
+<p>But it doesn’t have to be that way. With programmatic processes speeding up, publishers and SSPs can do more merchandising of impressions before they are put up for auction. This merchandising can take different forms — such as setting price floors, adding contextual signals and affixing brand suitability scores to a bid request — all of which can fall under the umbrella term of sell-side decisioning, as the video below explains.</p>
+
+
+
+<p><em>Index Exchange did not have any input or approval over the video&#8217;s editorial content.</em></p>
+
+
+
+<figure class="wp-block-embed aligncenter is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="WTF is sell-side decisioning?" width="500" height="281" src="https://www.youtube.com/embed/7YmfjEsHGcQ?feature=oembed&#038;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><script src='https://www.youtube.com/iframe_api'></script>
+</div></figure>
+</div>		<div class="bottom-article-links-bar">
+				<div id="social-share-icons" class="large">
+	<ul>
+									<li><a target="popup" title="Share in Facebook" onclick="window.open('https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri=','popup','width=600,height=600'); return false;" href="https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri="><span class="dashicons dashicons-facebook">Facebook</span></a></li>
+						<li><a target="popup" title="Share in Twitter" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=WTF%20is%20sell-side%20decisioning%3F','popup','width=600,height=600'); return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=WTF%20is%20sell-side%20decisioning%3F"><span class="dashicons dashicons-twitter">Twitter</span></a></li>
+			<li><a target="popup" title="Share in LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=WTF%20is%20sell-side%20decisioning%3F','popup','width=600,height=600'); return false;" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=WTF%20is%20sell-side%20decisioning%3F"><span class="dashicons dashicons-linkedin">LinkedIn</span></a></li>
+			<li><a target="popup" title="Share in Reddit" onclick="window.open('http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=WTF%20is%20sell-side%20decisioning%3F','popup','width=600,height=600'); return false;" href="http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fwtf-is-sell-side-decisioning-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=WTF%20is%20sell-side%20decisioning%3F"><span class="dashicons dashicons-reddit">Reddit</span></a></li>
+			</ul>
+</div>
+
+
+
+
+
+
+
+
+				<div class="copy-url">https://digiday.com/?p=580735</div>
+		</div>
+				</div><!-- .content-column -->
+		</div><!-- .content-column-wrapper -->
+
+		<div class="sidebar-column fly-sidebar-column">
+			<div class="fly-module-holder"><div class="sidebar-module fly-module sidebar-promo" id="">
+            <div class="sidebar-google-promo">
+            <div id="div-gpt-ad-web_rightrail_pos1" class="dfp-ad dfp-web_rightrail_pos1" data-ad-unit="web_rightrail_pos1">
+					<script type="text/javascript">
+						if ( "undefined" !== typeof googletag ) {
+							googletag.cmd.push( function() { googletag.display("div-gpt-ad-web_rightrail_pos1"); } );
+						}
+					</script>
+				</div>        </div>
+        </div>
+</div><div class="fly-module-holder">    <div class="sidebar-module most-read-module fly-module">
+        <div class="module-title">Trending in The Programmatic Publisher</div>
+        <ul class="news-list">
+            <li class="most-read-item">
+	<div class="news-content">
+		<div class="number">01</div>
+		<div class="title-wrapper">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/programmatic-publisher/">The Programmatic Publisher</a></div>			<a href="https://digiday.com/media-buying/inside-index-exchanges-multimillion-dollar-start-up-investment-pact-with-firstpartycapital/" title="Inside Index Exchange&#8217;s multimillion-dollar start-up investment pact with FirstPartyCapital" class="link" id="sidebar-trending">
+				Inside Index Exchange&#8217;s multimillion-dollar start-up investment pact with FirstPartyCapital			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/media-buying/inside-index-exchanges-multimillion-dollar-start-up-investment-pact-with-firstpartycapital/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2024/09/paper-fan-digiday.gif?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number">02</div>
+		<div class="title-wrapper">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/programmatic-publisher/">The Programmatic Publisher</a></div>			<a href="https://digiday.com/media/iab-tech-lab-unveils-plans-to-bolster-publisher-monetization-in-the-ai-era/" title="IAB Tech Lab unveils plans to bolster publisher monetization in the AI era" class="link" id="sidebar-trending">
+				IAB Tech Lab unveils plans to bolster publisher monetization in the AI era			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/media/iab-tech-lab-unveils-plans-to-bolster-publisher-monetization-in-the-ai-era/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2025/06/anthony-katsur.jpg?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number"></div>
+		<div class="title-wrapper">
+			<div class="eyebrow blue sponsored-eyebrow upper-title"><a href="https://digiday.com/sponsored/">Sponsored</a></div>			<a href="https://digiday.com/sponsored/wtf-is-sell-side-decisioning/" title="WTF is sell-side decisioning? | How SSPs are making programmatic more valuable and efficient" class="link" id="sidebar-trending">
+				WTF is sell-side decisioning? | How SSPs are making programmatic more valuable and efficient			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/sponsored/wtf-is-sell-side-decisioning/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2025/06/Email-gatebanner-2-01.jpg?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number">03</div>
+		<div class="title-wrapper">
+			<div class="eyebrow red locked-eyebrow upper-title exclusive"><a href="https://digiday.com/plus/">Member Exclusive</a></div>			<a href="https://digiday.com/media-buying/mntns-ipo-notes-how-complicated-it-is-to-launch-successfully-compared-to-recent-years/" title="Ad Tech Briefing: MNTN is ad tech&#8217;s canary in the coal mine for future public listings" class="link" id="sidebar-trending">
+				Ad Tech Briefing: MNTN is ad tech&#8217;s canary in the coal mine for future public listings			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/media-buying/mntns-ipo-notes-how-complicated-it-is-to-launch-successfully-compared-to-recent-years/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2025/01/increase-revenues-digiday.png?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+        </ul>
+    </div>
+</div><div class="fly-module-holder"><div class="sidebar-module fly-module sidebar-promo" id="">
+            <div class="sidebar-google-promo">
+            <div id="div-gpt-ad-web_rightrail_pos2" class="dfp-ad dfp-web_rightrail_pos2" data-ad-unit="web_rightrail_pos2">
+					<script type="text/javascript">
+						if ( "undefined" !== typeof googletag ) {
+							googletag.cmd.push( function() { googletag.display("div-gpt-ad-web_rightrail_pos2"); } );
+						}
+					</script>
+				</div>        </div>
+        </div>
+</div><div class="fly-module-holder">    <div class="sidebar-module most-read-module fly-module">
+        <div class="module-title">Most Read</div>
+        <ul class="news-list">
+            <li class="most-read-item">
+	<div class="news-content">
+		<div class="number">01</div>
+		<div class="title-wrapper">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/evolving-agencies/">Evolving Agencies</a></div>			<a href="https://digiday.com/media-buying/wpps-not-only-losing-mark-read-its-about-to-lose-another-client-to-publicis-mars/" title="WPP&#8217;s not only losing Mark Read, it&#8217;s about to lose another client to Publicis: Mars" class="link" id="sidebar-most-read">
+				WPP&#8217;s not only losing Mark Read, it&#8217;s about to lose another client to Publicis: Mars			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/media-buying/wpps-not-only-losing-mark-read-its-about-to-lose-another-client-to-publicis-mars/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2025/04/wpp-purchase-digiday.jpg?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number">02</div>
+		<div class="title-wrapper">
+			<div class="eyebrow blue sponsored-eyebrow upper-title"><a href="https://digiday.com/sponsored/">Sponsored</a></div>			<a href="https://digiday.com/sponsored/why-publishers-should-shift-to-selling-agents-not-ads/" title="Why publishers should shift to selling agents, not ads" class="link" id="sidebar-most-read">
+				Why publishers should shift to selling agents, not ads			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/sponsored/why-publishers-should-shift-to-selling-agents-not-ads/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2025/06/last-used_-1_22_25_-survey-email-robot-newspaper-digiday.gif?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number">03</div>
+		<div class="title-wrapper">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/evolving-agencies/">Evolving Agencies</a></div>			<a href="https://digiday.com/media-buying/why-these-five-possible-candidates-could-take-over-for-outgoing-wpp-ceo-mark-read/" title="Why these five possible candidates could take over for outgoing WPP CEO Mark Read" class="link" id="sidebar-most-read">
+				Why these five possible candidates could take over for outgoing WPP CEO Mark Read			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/media-buying/why-these-five-possible-candidates-could-take-over-for-outgoing-wpp-ceo-mark-read/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2025/06/resume-review-digiday.jpg?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number">04</div>
+		<div class="title-wrapper">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/strategizing-for-the-future/">Strategizing for the Future</a></div>			<a href="https://digiday.com/media-buying/publicis-and-ipg-win-paramounts-media-business/" title="Publicis and IPG win Paramount&#8217;s media business" class="link" id="sidebar-most-read">
+				Publicis and IPG win Paramount&#8217;s media business			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/media-buying/publicis-and-ipg-win-paramounts-media-business/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2024/11/media-blocks-digiday.jpg?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+<li class="most-read-item">
+	<div class="news-content">
+		<div class="number">05</div>
+		<div class="title-wrapper">
+			<div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/generative-ai/">Generative AI</a></div>			<a href="https://digiday.com/marketing/wpp-media-launches-its-manhattan-project-tech-solution-into-a-crowded-ai-market/" title="WPP Media launches its ‘Manhattan project’ tech solution into a crowded AI market" class="link" id="sidebar-most-read">
+				WPP Media launches its ‘Manhattan project’ tech solution into a crowded AI market			</a>
+		</div>
+					<a class="thumb" href="https://digiday.com/marketing/wpp-media-launches-its-manhattan-project-tech-solution-into-a-crowded-ai-market/">
+				<img width="68" height="68" src="https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?w=68&amp;h=68&amp;crop=1" class="attachment-sidebar_row size-sidebar_row wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=150,150 150w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=49,49 49w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=200,200 200w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=555,555 555w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=300,300 300w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=53,53 53w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=163,163 163w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=68,68 68w, https://digiday.com/wp-content/uploads/sites/3/2024/06/ai-human-agreement.jpg?resize=83,83 83w" sizes="auto, (max-width: 68px) 100vw, 68px" />			</a>
+			</div>
+</li>
+        </ul>
+    </div>
+</div>		</div><!-- .sidebar-column -->
+
+	</div><!-- .article-columns-wrapper -->
+
+        <section id="latest_stories" class="">
+        <div class="container">
+            <div class="section-title-contain">
+                                        <h3 class="home-section-title">
+                            <span>More in Media</span>
+                        </h3>
+                                                    <div class="section-view-more"><a href="https://digiday.com/media/">View More</a></div>
+                                    </div>
+            <div class="flex-container">
+                
+<div class="block-text">
+	<img width="439" height="277" src="https://digiday.com/wp-content/uploads/sites/3/2024/02/reddit-question-digiday.gif?w=439&amp;h=277&amp;crop=1" class="attachment-cat-block-thumbs size-cat-block-thumbs wp-post-image" alt="" decoding="async" loading="lazy" />    <div class="news-content">
+        <div class="eyebrow red locked-eyebrow upper-title exclusive"><a href="https://digiday.com/plus/">Member Exclusive</a></div>        <h4>
+            <a id="" class="title" href="https://digiday.com/media/media-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic/" title="Media Briefing: Reddit becomes a more noticeable source of publisher traffic  ">
+                Media Briefing: Reddit becomes a more noticeable source of publisher traffic              </a>
+        </h4>
+        <div class="article-info"><span class="date">June 12, 2025</span><div id="social-share-icons" class="">
+	<ul>
+									<li><a target="popup" title="Share in Facebook" onclick="window.open('https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri=','popup','width=600,height=600'); return false;" href="https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri="><span class="dashicons dashicons-facebook">Facebook</span></a></li>
+						<li><a target="popup" title="Share in Twitter" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=Media%20Briefing%3A%20Reddit%20becomes%20a%20more%20noticeable%20source%20of%20publisher%20traffic%C2%A0%C2%A0','popup','width=600,height=600'); return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=Media%20Briefing%3A%20Reddit%20becomes%20a%20more%20noticeable%20source%20of%20publisher%20traffic%C2%A0%C2%A0"><span class="dashicons dashicons-twitter">Twitter</span></a></li>
+			<li><a target="popup" title="Share in LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=Media%20Briefing%3A%20Reddit%20becomes%20a%20more%20noticeable%20source%20of%20publisher%20traffic%C2%A0%C2%A0','popup','width=600,height=600'); return false;" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=Media%20Briefing%3A%20Reddit%20becomes%20a%20more%20noticeable%20source%20of%20publisher%20traffic%C2%A0%C2%A0"><span class="dashicons dashicons-linkedin">LinkedIn</span></a></li>
+			<li><a target="popup" title="Share in Reddit" onclick="window.open('http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=Media%20Briefing%3A%20Reddit%20becomes%20a%20more%20noticeable%20source%20of%20publisher%20traffic%C2%A0%C2%A0','popup','width=600,height=600'); return false;" href="http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fmedia-briefing-reddit-becomes-a-more-noticeable-source-of-publisher-traffic%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=Media%20Briefing%3A%20Reddit%20becomes%20a%20more%20noticeable%20source%20of%20publisher%20traffic%C2%A0%C2%A0"><span class="dashicons dashicons-reddit">Reddit</span></a></li>
+			</ul>
+</div>
+
+
+
+
+
+
+
+
+</div>        <!-- The Excerpt -->
+        <p>As generative AI eats into search traffic, publishers are increasingly turning to platforms like Reddit to drive audiences to their sites. </p>
+    </div>
+</div>
+
+<div class="block-text">
+	<img width="439" height="277" src="https://digiday.com/wp-content/uploads/sites/3/2024/07/gaming-reality-1.jpeg?w=439&amp;h=277&amp;crop=1" class="attachment-cat-block-thumbs size-cat-block-thumbs wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2024/07/gaming-reality-1.jpeg?resize=439,277 439w, https://digiday.com/wp-content/uploads/sites/3/2024/07/gaming-reality-1.jpeg?resize=555,350 555w, https://digiday.com/wp-content/uploads/sites/3/2024/07/gaming-reality-1.jpeg?resize=160,100 160w" sizes="auto, (max-width: 439px) 100vw, 439px" />    <div class="news-content">
+        <div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/creator-economy/">The Creator Economy</a></div>        <h4>
+            <a id="" class="title" href="https://digiday.com/media/epic-aims-to-boost-originality-in-fortnites-creator-ecosystem/" title="Epic aims to boost originality in Fortnite’s creator ecosystem">
+                Epic aims to boost originality in Fortnite’s creator ecosystem            </a>
+        </h4>
+        <div class="article-info"><span class="date">June 10, 2025</span><div id="social-share-icons" class="">
+	<ul>
+									<li><a target="popup" title="Share in Facebook" onclick="window.open('https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri=','popup','width=600,height=600'); return false;" href="https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri="><span class="dashicons dashicons-facebook">Facebook</span></a></li>
+						<li><a target="popup" title="Share in Twitter" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=Epic%20aims%20to%20boost%20originality%20in%20Fortnite%E2%80%99s%20creator%20ecosystem','popup','width=600,height=600'); return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=Epic%20aims%20to%20boost%20originality%20in%20Fortnite%E2%80%99s%20creator%20ecosystem"><span class="dashicons dashicons-twitter">Twitter</span></a></li>
+			<li><a target="popup" title="Share in LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=Epic%20aims%20to%20boost%20originality%20in%20Fortnite%E2%80%99s%20creator%20ecosystem','popup','width=600,height=600'); return false;" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=Epic%20aims%20to%20boost%20originality%20in%20Fortnite%E2%80%99s%20creator%20ecosystem"><span class="dashicons dashicons-linkedin">LinkedIn</span></a></li>
+			<li><a target="popup" title="Share in Reddit" onclick="window.open('http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=Epic%20aims%20to%20boost%20originality%20in%20Fortnite%E2%80%99s%20creator%20ecosystem','popup','width=600,height=600'); return false;" href="http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-aims-to-boost-originality-in-fortnites-creator-ecosystem%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=Epic%20aims%20to%20boost%20originality%20in%20Fortnite%E2%80%99s%20creator%20ecosystem"><span class="dashicons dashicons-reddit">Reddit</span></a></li>
+			</ul>
+</div>
+
+
+
+
+
+
+
+
+</div>        <!-- The Excerpt -->
+        <p>Creators believe new Fortnite updates, including a moderation &#8220;similarity score,&#8221; will help fix the platform&#8217;s persistent copycat issues.</p>
+    </div>
+</div>
+
+<div class="block-text">
+	<img width="439" height="277" src="https://digiday.com/wp-content/uploads/sites/3/2025/01/gaming-evolution-digiday.jpg?w=439&amp;h=277&amp;crop=1" class="attachment-cat-block-thumbs size-cat-block-thumbs wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://digiday.com/wp-content/uploads/sites/3/2025/01/gaming-evolution-digiday.jpg?resize=439,277 439w, https://digiday.com/wp-content/uploads/sites/3/2025/01/gaming-evolution-digiday.jpg?resize=555,350 555w, https://digiday.com/wp-content/uploads/sites/3/2025/01/gaming-evolution-digiday.jpg?resize=160,100 160w" sizes="auto, (max-width: 439px) 100vw, 439px" />    <div class="news-content">
+        <div class="eyebrow regular-eyebrow upper-title"><a href="https://digiday.com/topic/creator-economy/">The Creator Economy</a></div>        <h4>
+            <a id="" class="title" href="https://digiday.com/media/epic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype/" title="Epic Games CEO Tim Sweeney hopes to outbuild YouTube, outmaneuver Apple and outlast the metaverse hype">
+                Epic Games CEO Tim Sweeney hopes to outbuild YouTube, outmaneuver Apple and outlast the metaverse hype            </a>
+        </h4>
+        <div class="article-info"><span class="date">June 9, 2025</span><div id="social-share-icons" class="">
+	<ul>
+									<li><a target="popup" title="Share in Facebook" onclick="window.open('https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri=','popup','width=600,height=600'); return false;" href="https://www.facebook.com/dialog/share?app_id=610029874501691&#038;display=popup&#038;href=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare&#038;utm_source=facebook&#038;redirect_uri="><span class="dashicons dashicons-facebook">Facebook</span></a></li>
+						<li><a target="popup" title="Share in Twitter" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=Epic%20Games%20CEO%20Tim%20Sweeney%20hopes%20to%20outbuild%20YouTube%2C%20outmaneuver%20Apple%20and%20outlast%20the%20metaverse%20hype','popup','width=600,height=600'); return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dtwitter&#038;text=Epic%20Games%20CEO%20Tim%20Sweeney%20hopes%20to%20outbuild%20YouTube%2C%20outmaneuver%20Apple%20and%20outlast%20the%20metaverse%20hype"><span class="dashicons dashicons-twitter">Twitter</span></a></li>
+			<li><a target="popup" title="Share in LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=Epic%20Games%20CEO%20Tim%20Sweeney%20hopes%20to%20outbuild%20YouTube%2C%20outmaneuver%20Apple%20and%20outlast%20the%20metaverse%20hype','popup','width=600,height=600'); return false;" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dlinkedin&#038;title=Epic%20Games%20CEO%20Tim%20Sweeney%20hopes%20to%20outbuild%20YouTube%2C%20outmaneuver%20Apple%20and%20outlast%20the%20metaverse%20hype"><span class="dashicons dashicons-linkedin">LinkedIn</span></a></li>
+			<li><a target="popup" title="Share in Reddit" onclick="window.open('http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=Epic%20Games%20CEO%20Tim%20Sweeney%20hopes%20to%20outbuild%20YouTube%2C%20outmaneuver%20Apple%20and%20outlast%20the%20metaverse%20hype','popup','width=600,height=600'); return false;" href="http://www.reddit.com/submit?url=https%3A%2F%2Fdigiday.com%2Fmedia%2Fepic-games-ceo-tim-sweeney-hopes-to-outbuild-youtube-outmaneuver-apple-and-outlast-the-metaverse-hype%2F%3Futm_medium%3Dsocial%26utm_campaign%3Ddigidaysiteshare%26utm_source%3Dreddit&#038;title=Epic%20Games%20CEO%20Tim%20Sweeney%20hopes%20to%20outbuild%20YouTube%2C%20outmaneuver%20Apple%20and%20outlast%20the%20metaverse%20hype"><span class="dashicons dashicons-reddit">Reddit</span></a></li>
+			</ul>
+</div>
+
+
+
+
+
+
+
+
+</div>        <!-- The Excerpt -->
+        <p>A Tim Sweeney interview sheds light on Epic Games&#8217; approach to Fortnite&#8217;s evolution as a creator platform — and comparisons to YouTube.</p>
+    </div>
+</div>
+            </div>
+            <div id="tp-member-exclusives-text" class="subscribe-text">
+                <div class="subscribe-contain">
+                    <div class="piano-logged-in">
+                                            </div>
+                    <div class="piano-logged-out">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <div class="top-stories-module">
+        <div class="container">
+            <div class="module-title">Digiday Top Stories</div>
+			        </div>
+    </div>
+    -->
+
+            <div class="article_sponsored_content">
+            <div id="div-gpt-ad-web_bfu" class="dfp-ad dfp-web_bfu" data-ad-unit="web_bfu">
+					<script type="text/javascript">
+						if ( "undefined" !== typeof googletag ) {
+							googletag.cmd.push( function() { googletag.display("div-gpt-ad-web_bfu"); } );
+						}
+					</script>
+				</div>        </div>
+    
+	<!-- Div to serve Piano -->
+	<div id="piano_offer_fixed"></div>
+</div><!-- #article-wrapper -->
+		<footer>
+			<div class="container">
+				<div class="footer_top">
+													<div class="pulse piano-logged-out">
+									<div class="pulse_left">
+										<div class="pulse_head">
+											<h3>DIGIDAY+</h3>
+										</div>
+										<p>Get access to tools and analysis to stay ahead of the trends transforming media and marketing</p>
+										<a class="subscribe button" href="https://digiday.com/subscribe/" title="Subscribe">Subscribe</a>
+									</div>
+								</div>
+																<div class="pulse piano-logged-in">
+									<div class="pulse_left">
+										<div class="pulse_head">
+											<h3>My Account</h3>
+										</div>
+										<p>Visit your account page to make changes and renew.</p>
+										<a class="subscribe button" href="https://digiday.com/my-account/" title="Account">Account</a>
+									</div>
+								</div>
+								
+					<div class="newsletter">
+						<h3>Newsletter</h3>
+						<p>Get Digiday&#039;s top stories every morning in your email inbox.</p>
+													<div id='lightbox-inline-form-2df6713e-a3c1-45fa-aa28-db3c835d5eaa'></div>
+											</div>
+
+					<div class="social-footer">
+						<h3>Connect</h3>
+						<p>Follow @Digiday for the latest news, insider access to events and more.</p>
+						<ul class="bottom-socials">
+							<li><a href="https://www.facebook.com/digiday/" title="Like us on Facebook"><span class="dashicons dashicons-facebook"></span></a></li><li><a href="https://www.instagram.com/digiday/" title="Follow us on Instagram"><span class="dashicons dashicons-instagram"></span></a></li><li><a href="https://www.twitter.com/digiday" title="Follow us on Twitter"><span class="dashicons dashicons-twitter"></span></a></li><li><a href="https://www.threads.net/@digiday" title="Follow us on Threads"><span class="dashicons threads"></span></a></li><li><a href="https://www.linkedin.com/company/digiday/" title="Follow us on LinkedIn"><span class="dashicons dashicons-linkedin"></span></a></li><li><a href="https://open.spotify.com/show/21TOeNMf1BLdSlQEdJ2rYY" title="Follow us on Spotify"><span class="dashicons dashicons-spotify"></span></a></li>						</ul>
+					</div>
+				</div>
+
+				<div class="footer_bottom">
+					<div class="container">
+						<div class="footer-bottom-links"><ul><li id="menu-item-416169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-416169"><a href="https://digiday.com/frequently-asked-questions/">FAQ</a></li>
+<li id="menu-item-510467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-510467"><a href="https://digiday.com/advertise/">Advertise</a></li>
+<li id="menu-item-510406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-510406"><a rel="privacy-policy" href="https://digiday.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-472303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-472303"><a href="/masthead/">Masthead</a></li>
+<li id="menu-item-223973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223973"><a href="https://www.digidaymedia.com">Digiday Media</a></li>
+</ul></div>						<div class="legal">
+							<a href="https://www.digidaymedia.com/" class="logo-media">
+								<img src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/digiday_media.svg" alt="logo">
+							</a>
+							<div class="copyright">&copy; 2025. All rights reserved</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+				<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6CCXQZ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script type="text/javascript" src="https://digiday.com/wp-includes/js/dist/hooks.min.js?m=1746040284g" ></script><script type="text/javascript" src="https://digiday.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-parsely-loader-js-before">
+/* <![CDATA[ */
+window.wpParselySiteId = 'digiday.com';
+window.wpParselyDisableAutotrack = true;
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://digiday.com/wp-content/mu-plugins/wp-parsely-3.19/build/loader.js?ver=ecf94842061bea03d54b" id="wp-parsely-loader-js"></script>
+<script type="text/javascript" defer="defer" data-parsely-site="digiday.com" src="https://cdn.parsely.com/keys/digiday.com/p.js?ver=3.19.3" id="parsely-cfg"></script>
+<script type="text/javascript" id="digiday-site-js-js-extra">
+/* <![CDATA[ */
+var wpArticle = {"ajax_url":"https:\/\/digiday.com\/wp-admin\/admin-ajax.php","post_id":"580735","leadgen_nonce":"40883bd344","is_premium":"0","tags":["article","the-programmatic-publisher","tim-peterson","media"]};
+var customRestRequestData = {"endpoints":{"featured_header":"https:\/\/digiday.com\/wp-json\/dm-rest-requests\/v1\/content\/get-featured-header"},"postID":"580735"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJzTLy/QTc7PK0nNK9EvyUjNTS3WT8lMz0xJrNTPSy3XLS5JLMlM1s8q1k8sAjJyUvVyM/P0sop19InVV5xZAtNkn2traG5ibmxgYWhmkgUA9xgr6A==" ></script><script type="text/javascript" defer="defer" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js?ver=1.0" id="digiday-createsend-js-js"></script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJy9j90OgjAMhV/IUYlGvDE+S9nqUtgPWTeIby8GSfTGRC68atrTnu8UpkHpGDKFDIMrloOAYcsG78qTYVSB8hRTrxYVOGjw0RRHAiPjLZaEoB0/DdZe8WxoE2aOoepkB79CWhd1LzAk1hysytg6WiEfw03u7y/QOJ8JoAjNpROIk6s0pliEXOV5W/6vhHV3Ef7BUAHHF+fqL3VzbA77c306dA8/GsGX" ></script><script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"38341125\",\"post\":\"580735\",\"tz\":\"-4\",\"srv\":\"digiday.com\",\"hp\":\"vip\",\"j\":\"1:14.6\"}") ]);
+_stq.push([ "clickTrackerInit", "38341125", "580735" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://stats.wp.com/e-202524.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJylzEEKAjEMQNELmYkWcXAhnqW2oaS2yZBGirdXUE/g9j/4ODdIKk7iuLVHYRmYuXCOT+iUOYKQT7U7fBSHR+eEdeAPor1Do6WzLHXs8J/jBKPGCW6mc5BBV2FXYynf/bVfDuvxHML+tIb6Ahg3Rt0=" ></script>	</body>
+</html>

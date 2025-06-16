@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  gist-replicator:
+    build: .
+    container_name: gist-replicator
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+    volumes:
+      - ./output:/app/replicated-sites
+      - ./logs:/app/logs
+    networks:
+      - replicator-network
+    restart: unless-stopped
+    cap_drop:
+      - ALL
+    cap_add:
+      - SYS_ADMIN # Required for Chrome sandbox
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:noexec,nosuid,size=100m
+
+  # Optional: Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: replicator-redis
+    networks:
+      - replicator-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
+
+networks:
+  replicator-network:
+    driver: bridge

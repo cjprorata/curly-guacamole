@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v21.8 (Yoast SEO v25.1) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Digiday Privacy Policy - Digiday</title>
+	<link rel="canonical" href="https://digiday.com/privacy-policy/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Digiday Privacy Policy" />
+	<meta property="og:description" content="Digiday Media Privacy Policy – Last updated October 21, 2021 Summary We collect your data (specifically outlined below, but generally basic information about you in a professional context, such as email, job title, company name, etc) strictly to provide you with access to our news, events and other programs. We will not share this data [&hellip;]" />
+	<meta property="og:url" content="https://digiday.com/privacy-policy/" />
+	<meta property="og:site_name" content="Digiday" />
+	<meta property="article:publisher" content="https://www.facebook.com/digiday/" />
+	<meta property="article:modified_time" content="2023-07-10T19:26:49+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@digiday" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://digiday.com/privacy-policy/","url":"https://digiday.com/privacy-policy/","name":"Digiday Privacy Policy - Digiday","isPartOf":{"@id":"https://digiday.com/#website"},"datePublished":"2023-04-11T14:50:16+00:00","dateModified":"2023-07-10T19:26:49+00:00","breadcrumb":{"@id":"https://digiday.com/privacy-policy/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://digiday.com/privacy-policy/"]}]},{"@type":"BreadcrumbList","@id":"https://digiday.com/privacy-policy/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://digiday.com/"},{"@type":"ListItem","position":2,"name":"Digiday Privacy Policy"}]},{"@type":"WebSite","@id":"https://digiday.com/#website","url":"https://digiday.com/","name":"Digiday","description":"Digital Content, Digital Advertising, Digital Marketing","publisher":{"@id":"https://digiday.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://digiday.com/search?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://digiday.com/#organization","name":"Digiday","url":"https://digiday.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://digiday.com/#/schema/logo/image/","url":"https://digiday.com/wp-content/uploads/sites/3/2017/06/Digiday_logo.png","contentUrl":"https://digiday.com/wp-content/uploads/sites/3/2017/06/Digiday_logo.png","width":1814,"height":1018,"caption":"Digiday"},"image":{"@id":"https://digiday.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/digiday/","https://x.com/digiday","https://www.instagram.com/digiday/","https://www.linkedin.com/company/digiday/","https://en.wikipedia.org/wiki/Digiday"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.lightboxcdn.com' />
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//js.createsend1.com' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//experience.tinypass.com' />
+<link rel='dns-prefetch' href='//cdn.viafoura.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Digiday &raquo; Feed" href="https://digiday.com/feed/" />
+<link rel='stylesheet' id='all-css-0' href='https://digiday.com/_static/??-eJyNi0sOgzAMBS/UxKQgwqbqWfIDWRgTxUFVbl9QparLLufNG3hlFXauiStkOhZkARcVuZaKQJAfUnHO+lxu8H/z/SMHOmL66IhSwdMeVkXoiysNpDZKekO+iuf2MHawfTeZ8f4GOsQ6yg==' type='text/css' media='all' />
+<style id='wp-parsely-recommendations-style-inline-css'>
+.parsely-recommendations-list-title{font-size:1.2em}.parsely-recommendations-list{list-style:none;padding:unset}.parsely-recommendations-cardbody{overflow:hidden;padding:.8em;text-overflow:ellipsis;white-space:nowrap}.parsely-recommendations-cardmedia{padding:.8em .8em 0}
+
+</style>
+<link rel='stylesheet' id='all-css-2' href='https://digiday.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpqbmBmYGBhZmAAARKou3w==' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='elasticpress-facet-style-inline-css'>
+.widget_ep-facet input[type=search],.wp-block-elasticpress-facet input[type=search]{margin-bottom:1rem}.widget_ep-facet .searchable .inner,.wp-block-elasticpress-facet .searchable .inner{max-height:20em;overflow:scroll}.widget_ep-facet .term.hide,.wp-block-elasticpress-facet .term.hide{display:none}.widget_ep-facet .empty-term,.wp-block-elasticpress-facet .empty-term{opacity:.5;position:relative}.widget_ep-facet .empty-term:after,.wp-block-elasticpress-facet .empty-term:after{bottom:0;content:" ";display:block;left:0;position:absolute;right:0;top:0;width:100%;z-index:2}.widget_ep-facet .level-1,.wp-block-elasticpress-facet .level-1{padding-left:20px}.widget_ep-facet .level-2,.wp-block-elasticpress-facet .level-2{padding-left:40px}.widget_ep-facet .level-3,.wp-block-elasticpress-facet .level-3{padding-left:60px}.widget_ep-facet .level-4,.wp-block-elasticpress-facet .level-4{padding-left:5pc}.widget_ep-facet .level-5,.wp-block-elasticpress-facet .level-5{padding-left:75pt}.widget_ep-facet input[disabled],.wp-block-elasticpress-facet input[disabled]{cursor:pointer;opacity:1}.widget_ep-facet .term a,.wp-block-elasticpress-facet .term a{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative}.widget_ep-facet .term a:hover .ep-checkbox,.wp-block-elasticpress-facet .term a:hover .ep-checkbox{background-color:#ccc}.ep-checkbox{-webkit-box-align:center;-ms-flex-align:center;-ms-flex-negative:0;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;background-color:#eee;display:-webkit-box;display:-ms-flexbox;display:flex;flex-shrink:0;height:1em;justify-content:center;margin-right:.25em;width:1em}.ep-checkbox:after{border:solid #fff;border-width:0 .125em .125em 0;content:"";display:none;height:.5em;-webkit-transform:rotate(45deg);transform:rotate(45deg);width:.25em}.ep-checkbox.checked{background-color:#5e5e5e}.ep-checkbox.checked:after{display:block}
+
+</style>
+<link rel='stylesheet' id='all-css-6' href='https://digiday.com/wp-content/mu-plugins/search/elasticpress/dist/css/related-posts-block-styles.min.css?m=1748964495g' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='all-css-10' href='https://digiday.com/_static/??-eJytktFOwzAMRX+I1ExMjBfEt5jE7SycpLKTRf17oq1IA6EJdbzGPj7RtaHNzudUKBUoR4pkEHjigAskas4KFvbgzWDsXeYkYyAdIqehPz7An3HzSpR+BWepEyeDSfHEZRmzRgOhCf2ymjUqGZXNtEXkbW4lDIsXNNuEv2tuRnobXhNzkQKjS1Ra1g93qQInDzGHKj3amTFl6H+hYufxMy4NRdw64X8sdOqYXWtyk+G83SHQiFVuL+JOkUfN1Ui+OTomNdClK6AduVvvSPXqML8qPzJ8i6+7w/7w9Piye95/AgN8Ml8=' type='text/css' media='all' />
+
+	<!-- dataLayer variable -->
+	<script>var dataLayer = window.dataLayer || []; dataLayer.push([]);</script>
+
+	<!-- Google Tag Manager script -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-K62HL6S');</script>
+
+	<script type="text/javascript" id="ad-layers-dfp-js-extra">
+/* <![CDATA[ */
+var adLayersDFP = {"layerDebugLabel":"Current ad layer","consoleDebugLabel":"Switch to Google console","adUnitPrefix":"div-gpt-ad-"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="ad-layers-js-extra">
+/* <![CDATA[ */
+var adLayersAdServer = {"jsAPIClass":"AdLayersDFPAPI"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSqy4uT8vJLUvBL9gpzS9My8Yv3EFN2cxMrUIrBuOEc3Ja2ANB1A1fa5tobmJubGBhaGZkZZAN8+Ra4=" ></script><script type="text/javascript" defer="defer" async="async" src="https://www.lightboxcdn.com/vendor/5a9c5a6f-b8c1-47bb-829a-55322a8adccd/lightbox_speed.js" id="digioh-low-impact-js"></script>
+<script type="text/javascript" src="https://digiday.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?m=1747308163g" ></script><script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/digiday.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/digiday.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"1a176e6621a1fb112503e1e258784598","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":0,"iconText":"Select date"}};
+var gf_legacy_multi = {"357":"1"};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/digiday.com\/wp-content\/plugins\/gravityforms\/images"}};
+/* ]]> */
+</script>
+<script type="text/javascript" id="gform_gravityforms-js-before">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://digiday.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.8" id="gform_gravityforms-js"></script>
+<script type="text/javascript" defer="defer" src="https://www.google.com/recaptcha/api.js?hl=en&amp;ver=6.7.2#038;render=explicit" id="gform_recaptcha-js"></script>
+<script type="text/javascript" id="piano-integration-js-extra">
+/* <![CDATA[ */
+var pianoSettings = {"aid":"6LaRkvUre6","sandbox":"","debug":"","env":"production","rids":{"plus":null},"rest_endpoints":{"term_info":"https:\/\/digiday.com\/wp-json\/piano\/v1\/term\/info","admin_base":"https:\/\/digiday.ddm.vipdev.lndo.site\/wp-admin\/admin-ajax.php"},"deepDive":"1","brand":"digiday"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJxtjUEOwiAQRS8kHZsa68Z4FlKQfISBMINNb2+jLly4/Hn579FazVJYPSvV1ANYKDT7hG730rKQFfEqFIUcRKkrkgwZPEQ50J+zQ4Czm8newRr2upb2MB9K4IVycT15oQrL5Uf/3ga7be8rCn8rt3wd59M8HS/jeYovZP1Bsw==" ></script><script type="text/javascript" defer="defer" src="https://experience.tinypass.com/xbuilder/experience/load?aid=6LaRkvUre6&amp;ver=2.1" id="tinypass-js"></script>
+<script type="text/javascript" defer="defer" src="//cdn.viafoura.net/entry/index.js?ver=9.11.1" id="viafoura-cdn-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" defer="defer" src="https://www.googletagmanager.com/gtag/js?id=G-SVGCV3Q0XS" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["digiday.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-SVGCV3Q0XS", {"googlesitekit_post_type":"page"});
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); } 
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Stream WordPress user activity plugin v4.1.1 -->
+<meta name="msvalidate.01" content="36BBCBBC8FB6F9263E98BDCC0E4879E2" /><meta name="google-site-verification" content="nh_stEEi0bDvS_eKTuH4hS7OC0cMFz9Au1O10t4Sy8M" /><meta name="generator" content="Site Kit by Google 1.152.1" />	<style>img#wpstats{display:none}</style>
+		<script type="application/ld+json" class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"WebPage","headline":"Digiday Privacy Policy","url":"http:\/\/digiday.com\/privacy-policy\/"}</script>	<link rel="apple-touch-icon" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-180x180.png" />
+
+	<link rel="apple-touch-icon-precomposed" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/apple/apple-touch-icon-180x180.png" />
+
+	<link rel="manifest" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/manifest.json">
+	<link rel="mask-icon" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/safari-pinned-tab.svg" color="#000000">
+	<meta name="apple-mobile-web-app-title" content="Digiday">
+	<meta name="application-name" content="Digiday">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="shortcut icon" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-96x96.png" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-48x48.png" sizes="48x48" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://digiday.com/wp-content/themes/digiday/static/images/favicons/favicon-128.png" sizes="128x128" />
+
+	<meta name="apple-mobile-web-app-title" content="Digiday" />
+	<meta name="msapplication-config" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/browserconfig.xml">
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://digiday.com/wp-content/themes/digiday/static/images/favicons/mstile-310x310.png" />
+
+								<script type='text/javascript'>
+				var dfpAdUnits = {};
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+				})();
+				</script>
+									<script type="text/javascript">
+			var dfpBuiltMappings = {}, dfpAdUnits = {};
+			googletag.cmd.push(function() {
+				dfpBuiltMappings["web_hp_rightrail"] = googletag.sizeMapping().addSize([1400,1],[[300,250]]).addSize([992,1],[[300,250]]).addSize([740,1],[[300,250]]).addSize([1,1],[[300,250]]).build();
+dfpBuiltMappings["300x250_hp_rightrail_0"] = googletag.sizeMapping().addSize([1400,1],[[300,250]]).addSize([992,1],[[300,250]]).addSize([740,1],[[300,250]]).addSize([1,1],[[300,250]]).build();
+dfpAdUnits["300x250_hp_rightrail_0"] = googletag.defineSlot("\/77046769\/digiday.com\/300x250_hp_rightrail_0",[300,250],"div-gpt-ad-300x250_hp_rightrail_0").defineSizeMapping(dfpBuiltMappings["300x250_hp_rightrail_0"]).setTargeting("aid",[499030]).setTargeting("author",["Haley Howell"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+dfpAdUnits["web_hp_rightrail"] = googletag.defineSlot("\/77046769\/digiday.com\/web_hp_rightrail",[300,250],"div-gpt-ad-web_hp_rightrail").defineSizeMapping(dfpBuiltMappings["web_hp_rightrail"]).setTargeting("aid",[499030]).setTargeting("author",["Haley Howell"]).setTargeting("environment",["production"]).addService(googletag.pubads());
+googletag.pubads().setTargeting("aid",[499030]).setTargeting("author",["Haley Howell"]).setTargeting("environment",["production"]);
+	googletag.pubads().setTargeting( 'breakpoint', ( window.innerWidth < 992 ) ? 'mobile' : 'desktop' );
+	googletag.pubads().addEventListener('slotOnload', function(event) {
+		var slot = event.slot;
+		document.getElementById(slot.getSlotElementId()).classList.add("advertisement-label");
+	});
+	googletag.pubads().enableAsyncRendering();
+googletag.pubads().enableLazyLoad({renderMarginPercent: 0, fetchMarginPercent: 0});
+googletag.pubads().enableSingleRequest();
+
+				if ( typeof AdLayersAPI === 'undefined' || ! AdLayersAPI.isDebug() ) {
+					googletag.enableServices();
+				}
+			});
+						var dfpSizeMapping = {"web_hp_rightrail":[[[1400,1],[[300,250]]],[[992,1],[[300,250]]],[[740,1],[[300,250]]],[[1,1],[[300,250]]]],"300x250_hp_rightrail_0":[[[1400,1],[[300,250]]],[[992,1],[[300,250]]],[[740,1],[[300,250]]],[[1,1],[[300,250]]]]};
+			var dfpAdLayer = {"post_id":373095,"title":"Page"};
+			var dfpAdDetails = {"300x250_hp_rightrail_0":{"path":"\/77046769\/digiday.com\/300x250_hp_rightrail_0","sizes":[300,250],"targeting":{"aid":[499030],"author":["Haley Howell"],"environment":["production"]}},"web_hp_rightrail":{"path":"\/77046769\/digiday.com\/web_hp_rightrail","sizes":[300,250],"targeting":{"aid":[499030],"author":["Haley Howell"],"environment":["production"]}}};
+			</script>
+			
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-T6CCXQZ5' );
+			
+/* ]]> */
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<link rel="icon" href="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=180" />
+<meta name="msapplication-TileImage" content="https://digiday.com/wp-content/uploads/sites/3/2020/11/mstile-310x310-1.png?w=270" />
+		<style type="text/css" id="wp-custom-css">
+			.network-event-quotes-section {
+    background-color: #00042d;
+}
+
+.network-event-quotes-section .er-testimonials-slider-wrapper .er-testimonials-slider .item {
+    background-color: #00042d;
+}		</style>
+		</head>
+
+<body class="privacy-policy page-template-default page page-id-499030 wp-embed-responsive digiday tp-level-false">
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K62HL6S"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>		<div class="wrapper	">
+			<div id="content" class="site-content">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main" role="main">
+						<div id="header" class="" >
+	<div id="sticky-header-wrapper">
+		<nav class="" id="site-navigation">
+			<div class="nav-wrapper top-head">
+				<div class="top_row">
+					<div class="left">
+						<a class="icon btn_menu" href="#" title="">
+							<div></div>
+							<div></div>
+							<div></div>
+						</a>
+
+						<a class="icon logo-mobile mobile-visible" href="https://digiday.com/">
+							<img alt="Digiday" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/digiday_logo.svg">
+						</a>
+
+
+						<div class="search_wrapper desktop-visible">
+							<form action="https://digiday.com/search/" class="search-form" method="get" role="search">
+								<input type="search" class="input_search" placeholder="Search &hellip;" value="" name="s" size="30"/>
+							</form>
+							<a class="icon btn_search" href="#">
+								<img class="icon-search" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_search.svg" alt="Search">
+								<img class="icon-close" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_close-black-alt.svg" alt="Close Search">
+							</a>
+						</div>
+
+						
+					</div>
+
+					<a class="icon logo desktop-visible" href="https://digiday.com/">
+						<img src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/digiday_logo.svg" alt="Digiday">
+					</a>
+
+
+
+					<div class="right">
+						<a class="icon subscribe_envelope desktop-visible" href="https://digiday.com/newsletters/" title="Subscribe">
+							<img alt="Digiday" src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_envelope-black.svg">
+						</a>
+						
+						<div class="tinypass-menu">
+							<div class="logged-out nav-logged-out">
+								<a class="subscribe"
+									href="https://digiday.com/subscribe/?utm_source=digiday.com&#038;utm_medium=direct&#038;utm_campaign=digidaydis&#038;subscribe_button">Subscribe</a> |
+								<a class="login tp-login-button" href="#">Login</a>
+							</div>
+							<div class="logged-in nav-logged-in">
+								<!-- Nicer arrow coming -->
+								<a class="menu_toggle dropdown-toggle" href="#"><span>Reader</span></a>
+								<ul class="my_menu nav-dropdown-menu">
+									<li class="who member-title">
+                                        <span class="avatar"></span>
+                                        <span class="full-name"></span>
+                                        <span class="tp-hide-if-free">Digiday+ Member</span>
+                                        <a class="nav-subscribe tp-hide-if-paid" href="/subscribe"><span>Subscribe Now</span></a>
+                                    </li>
+									<li class="plus"><a href="/plus">Digiday+ homepage</a></li>
+									<li><a href="/frequently-asked-questions/">FAQ</a></li>
+									<li><a href="/my-account/" class="account-overview">Account Overview</a></li>
+									<li><a href="" class="logout tp-logout-button">Logout</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				
+					
+                    <div class="bottom_row">
+                        <a class="btn_dropdown" href="#">News</a>
+                        <a href="https://digiday.com/plus/">Digiday +</a>
+<a href="/podcasts/">Podcasts</a>
+<a href="/events">Events</a>
+<a href="/awards/">Awards</a>
+                    </div>
+							</div>
+
+			<div class="mobile_menu">
+				<div class="mobile_menu_wrapper">
+					<div class="close">
+						<a href="#" class="btn_close"><img src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/icon_close-white.svg"></a>
+					</div>
+					<div class="sections">
+						<div class="section nav-sections">
+							<ul id="menu-main-menu-1" class="menu"><li><a href="/">News</a></li><li class="menu-nav_pulse menu-item menu-item-type-custom menu-item-object-custom menu-item-223951"><a href="https://digiday.com/plus/">Digiday +</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-276493"><a href="/podcasts/">Podcasts</a></li>
+<li class="menu-nav_events menu-item menu-item-type-custom menu-item-object-custom menu-item-223952"><a href="/events">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249063"><a href="/awards/">Awards</a></li>
+</ul>
+							<div class="mobile_search">
+								<form role="search" method="get" action="https://digiday.com/search/">
+									<div class="search-wrapper">
+										<input type="text" placeholder="Search" value="" name="s" size="30"/>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="section nav-hot-topics">
+							<h4>Hot Topics</h4>
+							<ul id="menu-hot-topic-menu" class="menu"><li id="menu-item-475391" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475391"><a href="https://digiday.com/topic/programmatic-publisher/">The Programmatic Publisher</a></li>
+<li id="menu-item-475396" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475396"><a href="https://digiday.com/topic/programmatic-luxury/">The Programmatic Marketer</a></li>
+<li id="menu-item-475390" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475390"><a href="https://digiday.com/topic/marketing-on-platforms/">Marketing on Platforms</a></li>
+<li id="menu-item-475392" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475392"><a href="https://digiday.com/topic/life-beyond-the-cookie/">Life Beyond the Cookie</a></li>
+<li id="menu-item-475394" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475394"><a href="https://digiday.com/topic/brands-in-culture/">Brands in Culture</a></li>
+<li id="menu-item-475395" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475395"><a href="https://digiday.com/topic/gaming-esports/">Gaming &amp; Esports</a></li>
+<li id="menu-item-475398" class="menu-item menu-item-type-taxonomy menu-item-object-topics menu-item-475398"><a href="https://digiday.com/topic/modern-newsroom/">Modern Newsroom</a></li>
+<li id="menu-item-479499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-479499"><a href="/topics/">All Topics</a></li>
+</ul>						</div>
+
+						<div class="section nav-categories">
+							<div class="tinypass-menu">
+								<div class="logged-out tp-hide-if-subscriber">
+									<a href="#" class="login tp-login-button">Login</a>
+									<a href="https://digiday.com/subscribe/" class="subscribe">Subscribe</a>
+								</div>
+								<div class="logged-in tp-hide-if-guest">
+									<a href="/my-account/" class="account-overview">My Account</a>
+									<a href="#" class="logout tp-logout-button">Logout</a>
+								</div>
+							</div>
+
+							<div class="mm"><ul id="menu-main-dropdown-rt" class="menu"><li id="menu-item-483405" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483405"><a href="https://digiday.com/series/special-projects/">Special Projects</a></li>
+<li id="menu-item-483404" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483404"><a href="https://digiday.com/series/research/">Digiday+ Research</a></li>
+<li id="menu-item-483406" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483406"><a href="https://digiday.com/series/wtf/">WTF Series</a></li>
+<li id="menu-item-522346" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-522346"><a href="/newsletters/">Newsletters</a></li>
+</ul></div>						</div>
+					</div>
+				</div>
+			</div> <!-- .mobile-menu -->
+
+			<div class="dropdown-content">
+				<div class="drop-wrapper dropdown_wrapper">
+											<div class="feature_story">
+															<div>
+									<img width="160" height="100" src="https://digiday.com/wp-content/uploads/sites/3/2022/02/Image-from-iOS-2.gif?w=160&amp;h=100&amp;crop=1" class="attachment-nav_feature_story size-nav_feature_story wp-post-image" alt="HIRING GIF american flag" decoding="async" />								</div>
+														<a href="https://digiday.com/marketing/ai-screenings-budget-cuts-and-burnout-whats-really-behind-advertisings-hiring-disconnect/" title="AI screenings, budget cuts, and burnout: What’s really behind advertising&#8217;s hiring disconnect">
+								AI screenings, budget cuts, and burnout: What’s really behind advertising&#8217;s hiring disconnect							</a>
+						</div>
+					
+					<div class="hot-topics"><ul id="menu-main-dropdown-right" class="menu"><li id="menu-item-223961" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-223961"><a href="https://digiday.com/media/">Media</a></li>
+<li id="menu-item-223960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-223960"><a href="https://digiday.com/marketing/">Marketing</a></li>
+<li id="menu-item-479498" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-479498"><a href="https://digiday.com/media-buying/">Media Buying</a></li>
+<li id="menu-item-362952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-362952"><a href="https://digiday.com/future-of-tv/">Future of TV</a></li>
+<li id="menu-item-461928" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-461928"><a href="https://digiday.com/es/">Español</a></li>
+</ul></div><div class="mm"><ul id="menu-main-dropdown-rt-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483405"><a href="https://digiday.com/series/special-projects/">Special Projects</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483404"><a href="https://digiday.com/series/research/">Digiday+ Research</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-483406"><a href="https://digiday.com/series/wtf/">WTF Series</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-522346"><a href="/newsletters/">Newsletters</a></li>
+</ul></div>				</div><!-- .drop-wrapper -->
+			</div><!-- .dropdown-content -->
+		</nav>
+	</div>
+	</div>
+
+
+
+	
+<div id="article-wrapper" class="lead container single-page-content">
+	
+
+<div class="article-name-block">
+	<div class="article-name-block-wrapper">
+				<h1>
+			Digiday Privacy Policy			<span class="tito-date-loc">
+															</span>
+		</h1>
+
+											</div>
+</div>
+
+    <article>
+        
+<p>Digiday Media Privacy Policy – Last updated October 21, 2021</p>
+
+
+
+<p><strong>Summary</strong></p>
+
+
+
+<p>We collect your data (specifically outlined below, but generally basic information about you in a professional context, such as email, job title, company name, etc) strictly to provide you with access to our news, events and other programs. We will not share this data with anyone unless you explicitly consent to us doing so. We honor your right to privacy and will comply with your wishes to remove your data from our systems.</p>
+
+
+
+<p><strong>Our commitment to privacy</strong></p>
+
+
+
+<p>You deserve to know how we collect and use the data you provide to us, and that’s what we are providing to you on this page. This notice applies to all information collected or submitted on the Digiday website or through our tools such as Digiday Connect, or the website of our sister sites, specifically Glossy and Gather. This notice was updated in October 2021 to reflect GDPR and CCPA compliance standards.&nbsp;</p>
+
+
+
+<p><strong>How we use your information</strong></p>
+
+
+
+<p>We use the data you provide to us for the following purposes:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Provide you with access to the content and events we produce.</li>
+
+
+
+<li>Analyze profile or behavioral data to help us improve the products we offer to you.</li>
+
+
+
+<li>In specific cases we will be contractually obligated to share your data with one of our third party advertisers or partners (for example, webinars, downloads or special events). In these instances, we will make it clear that the data you share will be transferred to the third party. You will always have the option to not have your data shared by not taking part in that specific program.</li>
+</ul>
+
+
+
+<p>We will store this information to keep you informed about other relevant products that may be useful to you.</p>
+
+
+
+<p>We will never use or share the information provided to us online in ways unrelated to the ones described above.</p>
+
+
+
+<p>Some information, such as your IP, address, email address and other data you share with us may be shared with the following third parties who help us run our website and email programs. They will only use this information to serve our needs and are prohibited from using it in any other instance. They are: Bounce Exchange (behavioral marketing and email acquisition), Google (ad serving and website tracking), Campaign Monitor (email), Gravity Forms (email acquisition), Tito (event registration), Open Water (awards programs).</p>
+
+
+
+<p><strong>Consequences of failure to provide consent</strong></p>
+
+
+
+<p>Consenting to allow us to process and store your data is optional. However, failure to provide that consent will prevent us from delivering the content, events and other experiences to you as mentioned above.</p>
+
+
+
+<p><strong>The information we collect</strong></p>
+
+
+
+<p>Across our web platform and events, you will be presented with the opportunity to sign up for newsletters, purchase event passes, submit your information to access content such as white papers or webinars, apply for eligibility at certain events and more.</p>
+
+
+
+<p>The type of information collected on those pages generally includes but is not limited to:</p>
+
+
+
+<p>Email address</p>
+
+
+
+<p>Name</p>
+
+
+
+<p>Job title or seniority</p>
+
+
+
+<p>Location</p>
+
+
+
+<p>Company name</p>
+
+
+
+<p>Company type</p>
+
+
+
+<p>Mailing/billing address</p>
+
+
+
+<p>Credit/debit card information (*NOTE: we do not save or store this information, and it will only be shared with our payment processors in order to complete the transaction in which you are engaging.)</p>
+
+
+
+<p>Based on the information you provide to us, we may create or append other information to your profile in the interest of better serving you (for example, your interests). As is the case with all data we collect, this will be kept private and for our business purposes only.</p>
+
+
+
+<p><strong>How to ask us to delete your data</strong></p>
+
+
+
+<p>If you would like to unsubscribe from our communications at any time, you may do so in the footer of any of our emails. If you would like us to delete your information entirely please fill out the form below and we will be in touch with further steps. Otherwise, by continuing to interact with our emails and programs, you provide us with permission to manage and use your data as described above.</p>
+
+
+
+<h3 class="wp-block-heading" id="h-data-removal-request">Data removal request</h3>
+
+
+
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_357' >
+                        <div class='gform_heading'>
+                            <h3 class="gform_title">✳️ Data removal request</h3>
+                            <p class='gform_description'></p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_357'  action='/privacy-policy/' data-formid='357' novalidate>
+                        <div class='gform-body gform_body'><ul id='gform_fields_357' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_357_1" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible email-address"  data-field-class="email-address" ><label class='gfield_label gform-field-label' for='input_357_1'>Email address<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_1' id='input_357_1' type='email' value='' class='medium'    aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_357_3" class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible 1-+-3--=-_____"  data-field-class="1-+-3--=-_____" ><label class='gfield_label gform-field-label' for='input_357_3'>1 + 3  = _____<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_357_3' type='text' value='' class='medium'  aria-describedby="gfield_description_357_3"   aria-required="true" aria-invalid="false"   /></div><div class='gfield_description' id='gfield_description_357_3'>(So we know you&#8217;re a real person)</div></li><li id="field_357_4" class="gfield gfield--type-captcha field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible captcha"  data-field-class="captcha" ><label class='gfield_label gform-field-label' for='input_357_4'>Captcha</label><div id='input_357_4' class='ginput_container ginput_recaptcha' data-sitekey='6LfsgTYqAAAAAObPgahhvKeAgEfBTdmF078Brwoc'  data-theme='light' data-tabindex='0'  data-badge=''></div></li><li id="field_357_5" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible name"  data-field-class="name" ><label class='gfield_label gform-field-label' for='input_357_5'>Name</label><div class='ginput_container'><input name='input_5' id='input_357_5' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_357_5'>This field is for validation purposes and should be left unchanged.</div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_357' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Submit'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_357' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_357' id='gform_theme_357' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_357' id='gform_style_settings_357' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_357' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='357' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_357' value='WyJbXSIsImZhNThmNzc2NmUzM2E3NTM2MDI2ZTQ5MWFkYTg1M2M5Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_357' id='gform_target_page_number_357' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_357' id='gform_source_page_number_357' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="17"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
+                        </div><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 357, 'https://digiday.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_357').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_357');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_357').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_357').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_357').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_357').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_357').val();gformInitSpinner( 357, 'https://digiday.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [357, current_page]);window['gf_submitting_357'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_357').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [357]);window['gf_submitting_357'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_357').text());}else{jQuery('#gform_357').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "357", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_357" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_357";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_357" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 357, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]&gt; */
+</script>
+
+
+
+<p><strong>Our commitment to the security of your data</strong></p>
+
+
+
+<p>To prevent unauthorized parties from accessing your data and maintain the accuracy and cleanliness of our own data while ensuring the correct use of it, we have put in place appropriate physical, electronic and managerial procedures to safeguard and secure the information we collect online.</p>
+
+
+
+<p>Questions about our privacy policy or how we use data? Email <a href="mailto:privacy@digiday.com">privacy@digiday.com</a>.</p>
+    </article>
+</div><!-- #article-wrapper -->
+
+			<footer>
+			<div class="container">
+				<div class="footer_top">
+													<div class="pulse piano-logged-out">
+									<div class="pulse_left">
+										<div class="pulse_head">
+											<h3>DIGIDAY+</h3>
+										</div>
+										<p>Get access to tools and analysis to stay ahead of the trends transforming media and marketing</p>
+										<a class="subscribe button" href="https://digiday.com/subscribe/" title="Subscribe">Subscribe</a>
+									</div>
+								</div>
+																<div class="pulse piano-logged-in">
+									<div class="pulse_left">
+										<div class="pulse_head">
+											<h3>My Account</h3>
+										</div>
+										<p>Visit your account page to make changes and renew.</p>
+										<a class="subscribe button" href="https://digiday.com/my-account/" title="Account">Account</a>
+									</div>
+								</div>
+								
+					<div class="newsletter">
+						<h3>Newsletter</h3>
+						<p>Get Digiday&#039;s top stories every morning in your email inbox.</p>
+													<div id='lightbox-inline-form-2df6713e-a3c1-45fa-aa28-db3c835d5eaa'></div>
+											</div>
+
+					<div class="social-footer">
+						<h3>Connect</h3>
+						<p>Follow @Digiday for the latest news, insider access to events and more.</p>
+						<ul class="bottom-socials">
+							<li><a href="https://www.facebook.com/digiday/" title="Like us on Facebook"><span class="dashicons dashicons-facebook"></span></a></li><li><a href="https://www.instagram.com/digiday/" title="Follow us on Instagram"><span class="dashicons dashicons-instagram"></span></a></li><li><a href="https://www.twitter.com/digiday" title="Follow us on Twitter"><span class="dashicons dashicons-twitter"></span></a></li><li><a href="https://www.threads.net/@digiday" title="Follow us on Threads"><span class="dashicons threads"></span></a></li><li><a href="https://www.linkedin.com/company/digiday/" title="Follow us on LinkedIn"><span class="dashicons dashicons-linkedin"></span></a></li><li><a href="https://open.spotify.com/show/21TOeNMf1BLdSlQEdJ2rYY" title="Follow us on Spotify"><span class="dashicons dashicons-spotify"></span></a></li>						</ul>
+					</div>
+				</div>
+
+				<div class="footer_bottom">
+					<div class="container">
+						<div class="footer-bottom-links"><ul><li id="menu-item-416169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-416169"><a href="https://digiday.com/frequently-asked-questions/">FAQ</a></li>
+<li id="menu-item-510467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-510467"><a href="https://digiday.com/advertise/">Advertise</a></li>
+<li id="menu-item-510406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy current-menu-item page_item page-item-499030 current_page_item menu-item-510406"><a rel="privacy-policy" href="https://digiday.com/privacy-policy/" aria-current="page">Privacy Policy</a></li>
+<li id="menu-item-472303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-472303"><a href="/masthead/">Masthead</a></li>
+<li id="menu-item-223973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223973"><a href="https://www.digidaymedia.com">Digiday Media</a></li>
+</ul></div>						<div class="legal">
+							<a href="https://www.digidaymedia.com/" class="logo-media">
+								<img src="https://digiday.com/wp-content/themes/digiday/client/new-assets/images/digiday_media.svg" alt="logo">
+							</a>
+							<div class="copyright">&copy; 2025. All rights reserved</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+				<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6CCXQZ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script type="text/javascript" src="https://digiday.com/wp-includes/js/dist/hooks.min.js?m=1746040284g" ></script><script type="text/javascript" src="https://digiday.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-parsely-loader-js-before">
+/* <![CDATA[ */
+window.wpParselySiteId = 'digiday.com';
+window.wpParselyDisableAutotrack = true;
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://digiday.com/wp-content/mu-plugins/wp-parsely-3.19/build/loader.js?ver=ecf94842061bea03d54b" id="wp-parsely-loader-js"></script>
+<script type="text/javascript" defer="defer" data-parsely-site="digiday.com" src="https://cdn.parsely.com/keys/digiday.com/p.js?ver=3.19.3" id="parsely-cfg"></script>
+<script type="text/javascript" id="digiday-site-js-js-extra">
+/* <![CDATA[ */
+var wpArticle = {"ajax_url":"https:\/\/digiday.com\/wp-admin\/admin-ajax.php","post_id":"499030","leadgen_nonce":"40883bd344","is_premium":"0","tags":[]};
+var customRestRequestData = {"endpoints":{"featured_header":"https:\/\/digiday.com\/wp-json\/dm-rest-requests\/v1\/content\/get-featured-header"},"postID":"499030"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJzTLy/QTc7PK0nNK9EvyUjNTS3WT8lMz0xJrNTPSy3XLS5JLMlM1s8q1k8sAjJyUvVyM/P0sop19InVV5xZAtNkn2traG5ibmxgYWhmkgUA9xgr6A==" ></script><script type="text/javascript" defer="defer" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js?ver=1.0" id="digiday-createsend-js-js"></script>
+<script type="text/javascript" src="https://digiday.com/wp-includes/js/dist/dom-ready.min.js?m=1746040284g" ></script><script type="text/javascript" defer="defer" src="https://digiday.com/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"1a176e6621a1fb112503e1e258784598"},"ajax":{"ajaxurl":"https:\/\/digiday.com\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"7a5ad93f2e","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}},"product_meta":{"357":null},"pagination":{"357":""}}},"hmr_dev":"","public_path":"https:\/\/digiday.com\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"75bd3e9f69"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJy9kE1uwkAMRi/ExCBQ6abiLGbGpA4zdjR2EnF7UtFIrbqoCqhL/+g9+4OpD1HFSRz6PLQsBm3Fkf1y0loM0IzcoDNIbA4jSdIa/J0KNYWl6WwFf2RYrNy7/Q5J3HLCSyiUGIOQT1rP4TYFlghF05DJYGQ86VARYuYPwFIHnoHzKc56n+SYNZ4N+sqRpQ2Ox0yL5Fvz4RdoTta/RqVTbiJWHYzyU0L6YVh2b4P/cATB8dNzKG+b/W6/Xb9uXrbdFaSS9lU=" ></script><script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"38341125\",\"post\":\"499030\",\"tz\":\"-4\",\"srv\":\"digiday.com\",\"hp\":\"vip\",\"j\":\"1:14.6\"}") ]);
+_stq.push([ "clickTrackerInit", "38341125", "499030" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://stats.wp.com/e-202524.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://digiday.com/_static/??-eJylzEEKAjEMQNELmYkWcXAhnqW2oaS2yZBGirdXUE/g9j/4ODdIKk7iuLVHYRmYuXCOT+iUOYKQT7U7fBSHR+eEdeAPor1Do6WzLHXs8J/jBKPGCW6mc5BBV2FXYynf/bVfDuvxHML+tIb6Ahg3Rt0=" ></script><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 357) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "357", currentPage: "1", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_357" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_357";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_357" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 357, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+	</body>
+</html>
