@@ -3557,6 +3557,9 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             answerContainer.classList.remove('visible');
             toolbox.classList.remove('visible');
             
+            // Hide ads when minimizing
+            hideExternalAds();
+            
             // Start the minimization animation
             setTimeout(() => {
                 widget.classList.add('minimized');
@@ -5045,8 +5048,6 @@ Instructions:
         }
         
         function showAnswerContent(answer) {
-            console.log('showAnswerContent called with answer:', answer);
-            
             // Format the answer with line breaks for better readability
             const formattedAnswer = answer.replace(/\n/g, '<br>');
             
@@ -5143,9 +5144,7 @@ Instructions:
                 }
                 
                 // Show external ads with delay
-                console.log('About to show external ads in 200ms from showAnswerContent');
                 setTimeout(() => {
-                    console.log('Calling showExternalAds from showAnswerContent');
                     showExternalAds();
                 }, 200);
 
@@ -5242,32 +5241,27 @@ Instructions:
         }
         
         function showExternalAds() {
-            const adsContainer = shadowRoot.getElementById('gist-ads-container');
-            console.log('showExternalAds called, adsContainer:', adsContainer);
+            // Only show ads if we're in Ask or Gist tool AND have actual content
+            const shouldShowAds = (currentTool === 'ask' || currentTool === 'gist') && hasAnswer;
             
-            if (!adsContainer) {
-                console.error('Ads container not found!');
+            if (!shouldShowAds) {
                 return;
             }
             
+            const adsContainer = shadowRoot.getElementById('gist-ads-container');
+            if (!adsContainer) return;
+            
             // Generate and insert ads HTML
-            const adsHTML = createMockAdsHTML();
-            console.log('Generated ads HTML:', adsHTML);
-            adsContainer.innerHTML = adsHTML;
+            adsContainer.innerHTML = createMockAdsHTML();
             
             // Show the ads container
             adsContainer.classList.add('visible');
-            console.log('Added visible class to ads container');
             
             // Animate the ads with a delay
             setTimeout(() => {
                 const mockAds = adsContainer.querySelector('.gist-mock-ads');
-                console.log('Mock ads element found:', mockAds);
                 if (mockAds) {
                     mockAds.classList.add('visible');
-                    console.log('Added visible class to mock ads');
-                } else {
-                    console.error('Mock ads element not found in container');
                 }
             }, 200);
         }
@@ -5276,7 +5270,14 @@ Instructions:
             const adsContainer = shadowRoot.getElementById('gist-ads-container');
             if (!adsContainer) return;
             
+            // Remove visible class from both container and inner ads
             adsContainer.classList.remove('visible');
+            const mockAds = adsContainer.querySelector('.gist-mock-ads');
+            if (mockAds) {
+                mockAds.classList.remove('visible');
+            }
+            
+            // Clear content after transition
             setTimeout(() => {
                 adsContainer.innerHTML = '';
             }, 500); // Wait for transition to complete
