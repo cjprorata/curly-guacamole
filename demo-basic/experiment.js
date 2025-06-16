@@ -2,57 +2,22 @@
     'use strict';
     
     // ================================
-    // CONFIGURATION - Now uses environment variables
+    // CONFIGURATION - Add your API key here
     // ================================
     // 
-    // 🚨 TO SET UP ENVIRONMENT VARIABLES:
-    // 1. Create a .env file in your project root
-    // 2. Add: OPENAI_API_KEY=your-api-key-here
-    // 3. Make sure your OpenAI account has billing set up
-    // 4. Restart your server to load the new environment variables
-    // ================================
-    
-    // Environment variables cache
-    let envCache = null;
-    
-    // Function to get environment variable or fallback
-    function getEnvVar(name, fallback = null) {
-        // Try to get from cached environment variables
-        if (envCache && envCache[name]) {
-            return envCache[name];
-        }
-        // Try to get from window (if set by server)
-        if (typeof window !== 'undefined' && window.ENV && window.ENV[name]) {
-            return window.ENV[name];
-        }
-        // Try to get from process.env (Node.js environment)
-        if (typeof process !== 'undefined' && process.env && process.env[name]) {
-            return process.env[name];
-        }
-        return fallback;
-    }
-    
-    // Function to load environment variables from server
-    async function loadEnvironmentVariables() {
-        try {
-            const response = await fetch('/api/env');
-            if (response.ok) {
-                envCache = await response.json();
-                console.log('[GistWidget] Environment variables loaded from server');
-                return envCache;
-            }
-        } catch (error) {
-            console.warn('[GistWidget] Could not load environment variables from server:', error);
-        }
-        return null;
-    }
-    
-    const WIDGET_CONFIG = {
-        API_KEY: getEnvVar('OPENAI_API_KEY', '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'), // Fallback to current key
-        API_BASE_URL: getEnvVar('OPENAI_API_BASE_URL', 'https://api.openai.com'),
-        MODEL: getEnvVar('WIDGET_MODEL', 'gpt-4o-mini'),
-        TIMEOUT_MS: parseInt(getEnvVar('WIDGET_TIMEOUT_MS', '30000')),
-        DEBOUNCE_MS: parseInt(getEnvVar('WIDGET_DEBOUNCE_MS', '300'))
+    // 🚨 TO FIX THE API KEY ERROR:
+    // 1. Go to https://platform.openai.com/account/api-keys
+    // 2. Create a new API key
+    // 3. Replace 'YOUR_OPENAI_API_KEY_HERE' below with your actual API key
+    // 4. Make sure your OpenAI account has billing set up
+          // ================================
+      const WIDGET_CONFIG = {
+          // API endpoints - these will call your secure serverless functions
+          CHAT_API_URL: '/api/chat', // Change this to your deployed URL: 'https://your-app.vercel.app/api/chat'
+          IMAGE_API_URL: '/api/image', // Change this to your deployed URL: 'https://your-app.vercel.app/api/image'
+          MODEL: 'gpt-3.5-turbo', // You can change this to gpt-4, gpt-4-turbo, etc.
+        TIMEOUT_MS: 20000, // 20 second timeout as per PRD
+        DEBOUNCE_MS: 300   // 300ms debounce as per PRD
     };
     
     // ================================
@@ -851,8 +816,11 @@
                     opacity: 0;
                     transform: translateX(-50%) translateY(10px);
                     transition: opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1), 
-                                transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                                filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                                filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                                left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                                right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                                width 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -886,7 +854,8 @@
                 }
                 
                 .gist-widget.minimized .gist-answer-container,
-                .gist-widget.minimized .gist-toolbox {
+                .gist-widget.minimized .gist-toolbox,
+                .gist-widget.minimized .gist-ads-container {
                     opacity: 0;
                     transform: translateY(15px) scale(0.95);
                     pointer-events: none;
@@ -938,7 +907,8 @@
                 }
                 
                 .gist-widget:not(.minimized) .gist-answer-container,
-                .gist-widget:not(.minimized) .gist-toolbox {
+                .gist-widget:not(.minimized) .gist-toolbox,
+                .gist-widget:not(.minimized) .gist-ads-container {
                     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
                 }
                 
@@ -995,8 +965,8 @@
                 
                 /* Compact version for Remix tool */
                 .gist-answer-container.remix-compact {
-                    width: 280px;
-                    max-height: 200px;
+                    width: 400px;
+                    max-height: 300px;
                     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
@@ -1027,6 +997,26 @@
                     pointer-events: auto;
                 }
                 
+                /* Ads Container Styling */
+                .gist-ads-container {
+                    width: 400px;
+                    position: relative;
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.95);
+                    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    pointer-events: none;
+                    order: 0;
+                    margin-bottom: 8px;
+                    display: none; /* Hidden by default */
+                }
+                
+                .gist-ads-container.visible {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                    pointer-events: auto;
+                    display: block;
+                }
+                
                 .gist-answer-content {
                     background: white;
                     border-radius: 14.5px 14.5px 0 0; /* Remove bottom radius since footer has it */
@@ -1042,7 +1032,7 @@
                 
                 /* Compact version for Remix tool */
                 .gist-answer-container.remix-compact .gist-answer-content {
-                    max-height: calc(200px - 40px); /* Account for footer height */
+                    max-height: calc(300px - 40px); /* Account for footer height */
                     padding: 12px;
                     overflow: hidden; /* Disable scrolling for Remix */
                 }
@@ -1639,18 +1629,22 @@
                     left: auto !important;
                     width: 450px !important;
                     transform: translateX(0) translateY(0) !important;
+                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
                 }
                 
                 .gist-widget.desktop-mode.loaded {
                     transform: translateX(0) translateY(0);
+                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-widget.desktop-mode.active {
                     transform: translateX(0) translateY(0);
+                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-widget.desktop-mode:not(.minimized) {
                     transform: translateX(0) translateY(0);
+                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-widget.desktop-mode .gist-answer-container {
@@ -1666,6 +1660,7 @@
                     right: 20px;
                     left: auto;
                     transform: translateX(0) translateY(0);
+                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-pill:hover {
@@ -1831,6 +1826,124 @@
                     line-height: 1;
                 }
                 
+                /* Mock Ads Styles */
+                .gist-mock-ads {
+                    margin-bottom: 16px;
+                    opacity: 0;
+                    transform: translateY(10px);
+                    transition: all 0.4s ease-out;
+                }
+                
+                .gist-mock-ads.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                .gist-mock-ads-header {
+                    font-size: 10px;
+                    color: #9ca3af;
+                    text-align: center;
+                    margin-bottom: 8px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+                
+                .gist-mock-ads-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
+                
+                .gist-mock-ad {
+                    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+                    border: 1px solid #e2e8f0;
+                    border-radius: 8px;
+                    padding: 8px 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .gist-mock-ad:hover {
+                    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+                    border-color: #cbd5e1;
+                    transform: translateY(-1px);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                }
+                
+                .gist-mock-ad::before {
+                    content: 'Ad';
+                    position: absolute;
+                    top: 2px;
+                    right: 4px;
+                    font-size: 8px;
+                    color: #9ca3af;
+                    background: #f3f4f6;
+                    padding: 1px 4px;
+                    border-radius: 3px;
+                    font-weight: 500;
+                }
+                
+                .gist-mock-ad-icon {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: white;
+                    flex-shrink: 0;
+                }
+                
+                .gist-mock-ad-content {
+                    flex: 1;
+                    min-width: 0;
+                }
+                
+                .gist-mock-ad-title {
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #1f2937;
+                    margin-bottom: 2px;
+                    line-height: 1.3;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                
+                .gist-mock-ad-description {
+                    font-size: 10px;
+                    color: #6b7280;
+                    line-height: 1.3;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                
+                .gist-mock-ad-cta {
+                    background: #3b82f6;
+                    color: white;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    font-size: 10px;
+                    font-weight: 500;
+                    border: none;
+                    cursor: pointer;
+                    transition: background 0.2s ease;
+                    flex-shrink: 0;
+                }
+                
+                .gist-mock-ad-cta:hover {
+                    background: #2563eb;
+                }
+                
                 .gist-remix-button {
                     width: 100%;
                     padding: 12px 24px;
@@ -1920,7 +2033,7 @@
                 .gist-answer-container.remix-compact .gist-remix-image {
                     border-radius: 8px;
                     margin-bottom: 6px;
-                    max-height: calc(200px - 70px); /* Leave space for prompt and actions */
+                    max-height: calc(300px - 70px); /* Leave space for prompt and actions */
                     width: 100%;
                     object-fit: cover;
                 }
@@ -2660,6 +2773,9 @@
                         <!-- Tabs will be generated dynamically based on TOOLS_CONFIG -->
                     </div>
                 </div>
+                <div class="gist-ads-container" id="gist-ads-container">
+                    <!-- Mock ads will be inserted here -->
+                </div>
                 <div class="gist-answer-container" id="gist-answer-container">
                     <button class="gist-close-btn" id="gist-close-btn" title="Minimize">×</button>
                     <div class="gist-answer-content">
@@ -2899,6 +3015,11 @@
             
 
             
+            // Hide ads when switching to tools that don't show ads
+            if (tool !== 'ask' && tool !== 'gist') {
+                hideExternalAds();
+            }
+            
             // Update content based on tool
             updateContentForTool(tool);
             
@@ -3019,7 +3140,7 @@
                     
                     /* Compact mode adjustments for Remix placeholder */
                     .gist-answer-container.remix-compact .gist-answer-placeholder {
-                        height: calc(200px - 24px); /* Account for reduced padding */
+                        height: calc(300px - 24px); /* Account for reduced padding */
                     }
                 `;
                 shadowRoot.appendChild(style);
@@ -3436,6 +3557,9 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             answerContainer.classList.remove('visible');
             toolbox.classList.remove('visible');
             
+            // Hide ads when minimizing
+            hideExternalAds();
+            
             // Start the minimization animation
             setTimeout(() => {
                 widget.classList.add('minimized');
@@ -3483,6 +3607,12 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             // Reset button appearance
             desktopModeBtn.style.background = '#6b7280';
             desktopModeBtn.title = 'Desktop Mode';
+            
+            // Explicitly reset positioning to center the widget
+            widget.style.right = '';
+            widget.style.left = '';
+            widget.style.width = '';
+            widget.style.transform = '';
             
             // Re-enable normal widget behavior
             userIsInteracting = false;
@@ -3653,14 +3783,9 @@ Instructions:
         
         // Special API call for gist that doesn't affect conversation history
         async function createChatCompletionForGist(prompt) {
-            if (!WIDGET_CONFIG.API_KEY || WIDGET_CONFIG.API_KEY === '') {
-                throw new Error('Gist API key not configured. Please set your API key in WIDGET_CONFIG.');
-            }
-            
             const requestBody = {
                 model: WIDGET_CONFIG.MODEL,
                 messages: [{ role: 'user', content: prompt }],
-                temperature: 0.3, // Lower temperature for more focused summaries
                 max_tokens: 300 // Shorter limit for concise summaries
             };
             
@@ -3668,11 +3793,10 @@ Instructions:
             const timeoutId = setTimeout(() => controller.abort(), WIDGET_CONFIG.TIMEOUT_MS);
             
             try {
-                const response = await fetch(`${WIDGET_CONFIG.API_BASE_URL}/v1/chat/completions`, {
+                const response = await fetch(WIDGET_CONFIG.CHAT_API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${WIDGET_CONFIG.API_KEY}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(requestBody),
                     signal: controller.signal
@@ -3682,13 +3806,13 @@ Instructions:
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
                 
                 if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-                    throw new Error('Invalid response format from Gist API');
+                    throw new Error('Invalid response format from API');
                 }
                 
                 return {
@@ -3809,7 +3933,10 @@ Instructions:
                     applyTextRevealAnimation(answerText);
                 }
                 
-                // Auto-collapse after showing gist content
+                // Show external ads with delay
+                setTimeout(() => {
+                    showExternalAds();
+                }, 200);
 
             }, 50);
             
@@ -3912,12 +4039,15 @@ Instructions:
         }
         
         function showGistError(errorMessage) {
-            answerContent.innerHTML = `
+            // Build HTML with error content (ads will be shown externally)
+            let html = `
                 <div class="gist-error-content gist-content-entering">
                     <div class="gist-error-title">Unable to Generate Summary</div>
                     <div class="gist-error-message">${errorMessage}</div>
                 </div>
             `;
+            
+            answerContent.innerHTML = html;
             
             // Trigger animation
             setTimeout(() => {
@@ -3926,6 +4056,11 @@ Instructions:
                     el.classList.remove('gist-content-entering');
                     el.classList.add('gist-content-entered');
                 });
+                
+                // Show external ads with delay
+                setTimeout(() => {
+                    showExternalAds();
+                }, 200);
             }, 50);
         }
         
@@ -4399,28 +4534,20 @@ Instructions:
         }
         
         async function createImageWithDALLE(prompt) {
-            if (!WIDGET_CONFIG.API_KEY || WIDGET_CONFIG.API_KEY === '') {
-                throw new Error('Gist API key not configured. Please set your API key in WIDGET_CONFIG.');
-            }
-            
             const requestBody = {
-                model: "dall-e-3",
                 prompt: prompt,
-                n: 1,
                 size: "1024x1024",
-                quality: "standard",
-                response_format: "url"
+                quality: "standard"
             };
             
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), WIDGET_CONFIG.TIMEOUT_MS * 2); // Longer timeout for image generation
             
             try {
-                const response = await fetch(`${WIDGET_CONFIG.API_BASE_URL}/v1/images/generations`, {
+                const response = await fetch(WIDGET_CONFIG.IMAGE_API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${WIDGET_CONFIG.API_KEY}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(requestBody),
                     signal: controller.signal
@@ -4430,13 +4557,13 @@ Instructions:
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
                 
                 if (!data.data || !data.data[0] || !data.data[0].url) {
-                    throw new Error('Invalid response format from DALL-E API');
+                    throw new Error('Invalid response format from image API');
                 }
                 
                 return {
@@ -4649,12 +4776,15 @@ Instructions:
         }
         
         function showRemixError(errorMessage) {
-            answerContent.innerHTML = `
+            // Build HTML with error content (ads will be shown externally)
+            let html = `
                 <div class="gist-error-content gist-content-entering">
                     <div class="gist-error-title">Unable to Generate Remix</div>
                     <div class="gist-error-message">${errorMessage}</div>
                 </div>
             `;
+            
+            answerContent.innerHTML = html;
             
             // Trigger animation
             setTimeout(() => {
@@ -4663,6 +4793,11 @@ Instructions:
                     el.classList.remove('gist-content-entering');
                     el.classList.add('gist-content-entered');
                 });
+                
+                // Show external ads with delay
+                setTimeout(() => {
+                    showExternalAds();
+                }, 200);
             }, 50);
         }
         
@@ -4769,10 +4904,6 @@ Instructions:
         
         // API Integration Functions
         async function createChatCompletion(userPrompt) {
-            if (!WIDGET_CONFIG.API_KEY || WIDGET_CONFIG.API_KEY === '' || WIDGET_CONFIG.API_KEY === 'YOUR_OPENAI_API_KEY_HERE') {
-                throw new Error('Gist API key not configured. Please set your API key in WIDGET_CONFIG.');
-            }
-            
             // Initialize conversation with page context (only on first message)
             initializeConversationWithContext();
             
@@ -4782,7 +4913,6 @@ Instructions:
             const requestBody = {
                 model: WIDGET_CONFIG.MODEL,
                 messages: conversationHistory,
-                temperature: 0.7,
                 max_tokens: 500
             };
             
@@ -4790,11 +4920,10 @@ Instructions:
             const timeoutId = setTimeout(() => controller.abort(), WIDGET_CONFIG.TIMEOUT_MS);
             
             try {
-                const response = await fetch(`${WIDGET_CONFIG.API_BASE_URL}/v1/chat/completions`, {
+                const response = await fetch(WIDGET_CONFIG.CHAT_API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${WIDGET_CONFIG.API_KEY}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(requestBody),
                     signal: controller.signal
@@ -4804,13 +4933,13 @@ Instructions:
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
                 
                 if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-                    throw new Error('Invalid response format from Gist API');
+                    throw new Error('Invalid response format from API');
                 }
                 
                 const assistantMessage = data.choices[0].message.content;
@@ -4870,11 +4999,16 @@ Instructions:
         }
         
         function showErrorContent(errorMessage) {
-            answerContent.innerHTML = `
+            // Check if we're in Ask or Gist tool to show ads
+            const shouldShowAds = currentTool === 'ask' || currentTool === 'gist';
+            
+            let html = `
                 <div class="gist-error gist-content-entering">
                     <strong>Error:</strong> ${errorMessage}
                 </div>
             `;
+            
+            answerContent.innerHTML = html;
             
             // Trigger animation
             setTimeout(() => {
@@ -4882,6 +5016,13 @@ Instructions:
                 if (errorElement) {
                     errorElement.classList.remove('gist-content-entering');
                     errorElement.classList.add('gist-content-entered');
+                }
+                
+                // Show external ads with delay if appropriate
+                if (shouldShowAds) {
+                    setTimeout(() => {
+                        showExternalAds();
+                    }, 200);
                 }
             }, 50);
         }
@@ -4913,7 +5054,7 @@ Instructions:
             // Generate mock attribution data
             const mockAttributions = generateMockAttributions();
             
-            // Build HTML with initial hidden state for animations
+            // Build HTML without ads (ads will be shown externally)
             let html = `<div class="gist-answer-text gist-content-entering">${formattedAnswer}</div>`;
             
             // Add attribution section
@@ -5002,10 +5143,145 @@ Instructions:
                     applyTextRevealAnimation(answerText);
                 }
                 
+                // Show external ads with delay
+                setTimeout(() => {
+                    showExternalAds();
+                }, 200);
 
             }, 50);
         }
         
+        function generateMockAds() {
+            const mockAds = [
+                {
+                    icon: '💰',
+                    iconBg: '#10b981',
+                    title: 'Invest Smarter with AI',
+                    description: 'Get personalized investment recommendations powered by machine learning',
+                    cta: 'Start Free',
+                    url: '#'
+                },
+                {
+                    icon: '📊',
+                    iconBg: '#3b82f6',
+                    title: 'Market Analytics Pro',
+                    description: 'Real-time market data and advanced charting tools for traders',
+                    cta: 'Try Now',
+                    url: '#'
+                },
+                {
+                    icon: '🎓',
+                    iconBg: '#8b5cf6',
+                    title: 'Learn Finance Online',
+                    description: 'Master financial concepts with interactive courses and expert guidance',
+                    cta: 'Enroll',
+                    url: '#'
+                },
+                {
+                    icon: '🏦',
+                    iconBg: '#f59e0b',
+                    title: 'Digital Banking Plus',
+                    description: 'Next-gen banking with zero fees and instant transfers worldwide',
+                    cta: 'Sign Up',
+                    url: '#'
+                },
+                {
+                    icon: '📱',
+                    iconBg: '#ef4444',
+                    title: 'Trading App 2024',
+                    description: 'Commission-free trading with advanced mobile tools and insights',
+                    cta: 'Download',
+                    url: '#'
+                },
+                {
+                    icon: '🔒',
+                    iconBg: '#06b6d4',
+                    title: 'Secure Crypto Wallet',
+                    description: 'Store and trade cryptocurrencies with military-grade security',
+                    cta: 'Get Wallet',
+                    url: '#'
+                }
+            ];
+            
+            // Randomly select 3 ads
+            const shuffled = mockAds.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, 3);
+        }
+        
+        function createMockAdsHTML() {
+            const ads = generateMockAds();
+            
+            let html = `
+                <div class="gist-mock-ads">
+                    <div class="gist-mock-ads-container">
+            `;
+            
+            ads.forEach(ad => {
+                html += `
+                    <div class="gist-mock-ad" onclick="window.open('${ad.url}', '_blank')">
+                        <div class="gist-mock-ad-icon" style="background: ${ad.iconBg};">
+                            ${ad.icon}
+                        </div>
+                        <div class="gist-mock-ad-content">
+                            <div class="gist-mock-ad-title">${ad.title}</div>
+                            <div class="gist-mock-ad-description">${ad.description}</div>
+                        </div>
+                        <button class="gist-mock-ad-cta">${ad.cta}</button>
+                    </div>
+                `;
+            });
+            
+            html += `
+                    </div>
+                </div>
+            `;
+            
+            return html;
+        }
+        
+        function showExternalAds() {
+            // Only show ads if we're in Ask or Gist tool AND have actual content
+            const shouldShowAds = (currentTool === 'ask' || currentTool === 'gist') && hasAnswer;
+            
+            if (!shouldShowAds) {
+                return;
+            }
+            
+            const adsContainer = shadowRoot.getElementById('gist-ads-container');
+            if (!adsContainer) return;
+            
+            // Generate and insert ads HTML
+            adsContainer.innerHTML = createMockAdsHTML();
+            
+            // Show the ads container
+            adsContainer.classList.add('visible');
+            
+            // Animate the ads with a delay
+            setTimeout(() => {
+                const mockAds = adsContainer.querySelector('.gist-mock-ads');
+                if (mockAds) {
+                    mockAds.classList.add('visible');
+                }
+            }, 200);
+        }
+        
+        function hideExternalAds() {
+            const adsContainer = shadowRoot.getElementById('gist-ads-container');
+            if (!adsContainer) return;
+            
+            // Remove visible class from both container and inner ads
+            adsContainer.classList.remove('visible');
+            const mockAds = adsContainer.querySelector('.gist-mock-ads');
+            if (mockAds) {
+                mockAds.classList.remove('visible');
+            }
+            
+            // Clear content after transition
+            setTimeout(() => {
+                adsContainer.innerHTML = '';
+            }, 500); // Wait for transition to complete
+        }
+
         function generateMockAttributions() {
             // Array of possible mock sources with realistic names and rich data
             const possibleSources = [
@@ -5233,6 +5509,7 @@ Instructions:
             if (!isActive) {
                 answerContainer.classList.remove('visible');
                 toolbox.classList.remove('visible');
+                hideExternalAds();
             }
         }
         
@@ -5617,10 +5894,7 @@ Instructions:
     };
 
     // Initialize widget when DOM is ready
-    async function initWidget() {
-        // Load environment variables first
-        await loadEnvironmentVariables();
-        
+    function initWidget() {
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', createWidget);
         } else {
