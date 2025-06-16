@@ -816,11 +816,8 @@
                     opacity: 0;
                     transform: translateX(-50%) translateY(10px);
                     transition: opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1), 
-                                transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                                filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                                left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                                right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                                width 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                                filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -1607,22 +1604,18 @@
                     left: auto !important;
                     width: 450px !important;
                     transform: translateX(0) translateY(0) !important;
-                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
                 }
                 
                 .gist-widget.desktop-mode.loaded {
                     transform: translateX(0) translateY(0);
-                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-widget.desktop-mode.active {
                     transform: translateX(0) translateY(0);
-                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-widget.desktop-mode:not(.minimized) {
                     transform: translateX(0) translateY(0);
-                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-widget.desktop-mode .gist-answer-container {
@@ -1638,7 +1631,6 @@
                     right: 20px;
                     left: auto;
                     transform: translateX(0) translateY(0);
-                    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
                 .gist-pill:hover {
