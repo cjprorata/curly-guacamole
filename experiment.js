@@ -5213,7 +5213,6 @@ Instructions:
             
             let html = `
                 <div class="gist-mock-ads">
-                    <div class="gist-mock-ads-header">Sponsored</div>
                     <div class="gist-mock-ads-container">
             `;
             
