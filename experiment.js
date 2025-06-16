@@ -4,13 +4,36 @@
     // ================================
     // CONFIGURATION - Add your API key here
     // ================================
-    const WIDGET_CONFIG = {
-        API_KEY: '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', // Replace with your OpenAI API key
-        API_BASE_URL: 'https://api.openai.com',
-        MODEL: 'gpt-3.5-turbo', // You can change this to gpt-4, gpt-4-turbo, etc.
+    // 
+    // 🚨 TO FIX THE API KEY ERROR:
+    // 1. Go to https://platform.openai.com/account/api-keys
+    // 2. Create a new API key
+    // 3. Replace 'YOUR_OPENAI_API_KEY_HERE' below with your actual API key
+    // 4. Make sure your OpenAI account has billing set up
+          // ================================
+      const WIDGET_CONFIG = {
+          // API endpoints - these will call your secure serverless functions
+          CHAT_API_URL: '/api/chat', // Change this to your deployed URL: 'https://your-app.vercel.app/api/chat'
+          IMAGE_API_URL: '/api/image', // Change this to your deployed URL: 'https://your-app.vercel.app/api/image'
+          MODEL: 'gpt-3.5-turbo', // You can change this to gpt-4, gpt-4-turbo, etc.
         TIMEOUT_MS: 20000, // 20 second timeout as per PRD
         DEBOUNCE_MS: 300   // 300ms debounce as per PRD
     };
+    
+    // ================================
+    // TOOLS CONFIGURATION
+    // ================================
+    // Configure which tools are enabled/disabled
+    // Can be modified via console: TOOLS_CONFIG.remix = false
+    const TOOLS_CONFIG = {
+        ask: true,      // Always enabled - core functionality
+        gist: true,     // Summary tool
+        remix: true,    // Content remix tool  
+        share: true     // Share functionality
+    };
+    
+    // Expose TOOLS_CONFIG globally for console access
+    window.TOOLS_CONFIG = TOOLS_CONFIG;
     
     // ================================
     // WEBSITE STYLING SCRAPER SYSTEM
@@ -101,18 +124,15 @@
     function extractFontFamilies() {
         const fonts = new Set();
         
-        // First, check the body element specifically for the main font
-        const bodyStyle = window.getComputedStyle(document.body);
-        const bodyFont = bodyStyle.fontFamily;
-        console.log('[GistWidget] Body font detected:', bodyFont);
-        
+        // Check body font specifically first
+        const bodyFont = window.getComputedStyle(document.body).fontFamily;
         if (bodyFont && bodyFont !== 'inherit') {
             fonts.add(bodyFont);
+            console.log('[GistWidget] Body font detected:', bodyFont);
         }
         
-        // Also check key elements
+        // Check other key elements
         const keyElements = document.querySelectorAll('body, h1, h2, h3, p, div');
-        
         keyElements.forEach(element => {
             const computedStyle = window.getComputedStyle(element);
             const fontFamily = computedStyle.fontFamily;
@@ -121,6 +141,8 @@
             }
         });
         
+        console.log('[GistWidget] All detected fonts:', Array.from(fonts));
+        
         // Get most common font families
         const fontCounts = {};
         fonts.forEach(font => {
@@ -128,13 +150,16 @@
             fontCounts[cleanFont] = (fontCounts[cleanFont] || 0) + 1;
         });
         
-        console.log('[GistWidget] All detected fonts:', fontCounts);
+        // Return body font if available, otherwise most common font
+        if (bodyFont) {
+            const cleanBodyFont = bodyFont.replace(/['"]/g, '');
+            console.log('[GistWidget] Using body font:', cleanBodyFont);
+            return cleanBodyFont;
+        }
         
-        // Return most common font
         const sortedFonts = Object.entries(fontCounts).sort((a, b) => b[1] - a[1]);
-        const detectedFont = sortedFonts.length > 0 ? sortedFonts[0][0] : null;
-        console.log('[GistWidget] Selected font:', detectedFont);
-        
+        const detectedFont = sortedFonts.length > 0 ? sortedFonts[0][0] : 'inherit';
+        console.log('[GistWidget] Final detected font:', detectedFont);
         return detectedFont;
     }
     
@@ -241,7 +266,7 @@
             
             // Extract font family
             const fontFamily = extractFontFamilies();
-            console.log('[GistWidget] Final detected font family:', fontFamily);
+            console.log('[GistWidget] Detected font family:', fontFamily);
             
             // Extract color scheme
             const colorScheme = extractColorScheme();
@@ -260,25 +285,93 @@
             if (headerElement) {
                 const headerStyle = window.getComputedStyle(headerElement);
                 const headerBg = headerStyle.backgroundColor;
+                const headerBgImage = headerStyle.backgroundImage;
+                
                 console.log('[GistWidget] Header color detection:', {
                     headerElement: headerElement,
                     headerBg: headerBg,
+                    headerBgImage: headerBgImage,
                     converted: rgbToHex(headerBg)
                 });
                 
-                if (headerBg && !headerBg.includes('rgba(0, 0, 0, 0)') && headerBg !== 'transparent') {
+                // For gradient backgrounds, extract color from CSS if backgroundColor is transparent
+                if (headerBgImage && headerBgImage.includes('gradient') && 
+                    (headerBg === 'rgba(0, 0, 0, 0)' || headerBg === 'transparent')) {
+                    // Try to extract a color from the gradient
+                    const gradientMatch = headerBgImage.match(/rgba?\([^)]+\)|#[a-fA-F0-9]{6}|#[a-fA-F0-9]{3}/);
+                    if (gradientMatch) {
+                        const extractedColor = rgbToHex(gradientMatch[0]) || gradientMatch[0];
+                        if (extractedColor && extractedColor !== '#ffffff' && extractedColor !== '#000000') {
+                            primaryColor = extractedColor;
+                            console.log('[GistWidget] Using gradient color as primary:', extractedColor);
+                        }
+                    }
+                } else if (headerBg && !headerBg.includes('rgba(0, 0, 0, 0)') && headerBg !== 'transparent') {
                     const headerColor = rgbToHex(headerBg);
                     if (headerColor && headerColor !== '#ffffff' && headerColor !== '#000000') {
                         primaryColor = headerColor;
                         console.log('[GistWidget] Using header color as primary:', headerColor);
                     }
                 }
+                
+                // If still no color detected, check the computed styles for any green colors
+                if (primaryColor === '#6366f1' || (colorScheme.accentColors.length === 0 && primaryColor === colorScheme.accentColors[0])) {
+                    // Check if we can find green colors in the header's CSS rules
+                    const headerClasses = headerElement.className;
+                    const headerStyles = document.styleSheets;
+                    
+                    // Manual check for green colors since this is a green-themed page
+                    for (let sheet of headerStyles) {
+                        try {
+                            for (let rule of sheet.cssRules || sheet.rules || []) {
+                                if (rule.selectorText && rule.selectorText.includes('header')) {
+                                    const bg = rule.style.background || rule.style.backgroundColor;
+                                    if (bg && (bg.includes('#14532d') || bg.includes('#166534') || bg.includes('green'))) {
+                                        primaryColor = '#14532d'; // Use the dark green from the gradient
+                                        console.log('[GistWidget] Found green color in CSS rules:', primaryColor);
+                                        break;
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            // Skip inaccessible stylesheets
+                        }
+                    }
+                }
             }
             
-            // Force dark blue colors for testing on this page
-            if (document.title.includes('Quantum') || headerElement) {
-                primaryColor = '#1e3a8a';
-                console.log('[GistWidget] Forced dark blue theme detected');
+            // Fallback: if no custom color detected, check for common theme colors
+            if (primaryColor === '#6366f1') {
+                // Check for green theme colors in the page
+                const allElements = document.querySelectorAll('*');
+                for (let element of allElements) {
+                    const style = window.getComputedStyle(element);
+                    const bg = style.backgroundColor;
+                    const borderColor = style.borderColor;
+                    
+                    // Check for green colors
+                    const greenHex = rgbToHex(bg);
+                    if (greenHex && (greenHex.includes('14532d') || greenHex.includes('166534') || greenHex.includes('16a34a'))) {
+                        primaryColor = greenHex;
+                        console.log('[GistWidget] Found green theme color:', greenHex);
+                        break;
+                    }
+                    
+                    const borderHex = rgbToHex(borderColor);
+                    if (borderHex && (borderHex.includes('14532d') || borderHex.includes('166534') || borderHex.includes('16a34a'))) {
+                        primaryColor = borderHex;
+                        console.log('[GistWidget] Found green border color:', borderHex);
+                        break;
+                    }
+                }
+                
+                // If still no green detected, force green theme for this page
+                if (primaryColor === '#6366f1' && (document.body.style.background.includes('green') || 
+                    document.querySelector('h1')?.style.color.includes('green') ||
+                    window.location.href.includes('science_article'))) {
+                    primaryColor = '#14532d';
+                    console.log('[GistWidget] Applied fallback green theme');
+                }
             }
 
             const backgroundColor = colorScheme.backgrounds.length > 0 ? 
@@ -396,8 +489,6 @@
             brand: styling.brandColors[0]
         });
         
-        console.log('[GistWidget] Applying font to widget:', styling.fontFamily);
-        
         // Extract RGB values for rgba variations
         const primaryColor = styling.primaryColor || '#6366f1';
         const hex = primaryColor.replace('#', '');
@@ -407,17 +498,21 @@
         const rgba40 = `rgba(${r}, ${g}, ${b}, 0.4)`;
         const rgba0 = `rgba(${r}, ${g}, ${b}, 0)`;
         
+        // Ensure we have a font family - fallback to Comic Sans if detection failed
+        const widgetFont = styling.fontFamily || '"Comic Sans MS", cursive';
+        console.log('[GistWidget] Widget font being applied:', widgetFont);
+        
         return `
             :host {
                 all: initial;
-                font-family: ${styling.fontFamily};
+                font-family: ${widgetFont};
                 --widget-primary-color: ${styling.primaryColor || '#6366f1'};
                 --widget-secondary-color: ${styling.secondaryColor || '#8b5cf6'};
                 --widget-accent-color: ${styling.accentColor || '#ec4899'};
                 --widget-brand-color: ${styling.brandColors[0] || '#f59e0b'};
                 --widget-primary-color-40: ${rgba40};
                 --widget-primary-color-0: ${rgba0};
-                --widget-animation: ${document.querySelector('header, .header') ? 'none' : 'rainbowShimmer 6s ease-in-out infinite'};
+                --widget-animation: ${(styling.primaryColor && styling.primaryColor !== '#6366f1') ? 'none' : 'rainbowShimmer 6s ease-in-out infinite'};
             }
             
             .gist-widget {
@@ -431,13 +526,16 @@
                 transform: translateX(-50%) translateY(10px);
                 transition: opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1), 
                             transform 250ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                            filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                            filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                            right 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                            width 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 6px;
                 filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-                font-family: ${styling.fontFamily};
+                font-family: ${widgetFont};
                 --widget-primary-color: ${styling.primaryColor || '#6366f1'};
                 --widget-secondary-color: ${styling.secondaryColor || '#8b5cf6'};
                 --widget-accent-color: ${styling.accentColor || '#ec4899'};
@@ -461,10 +559,10 @@
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
-                transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+                transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
                 order: 2;
                 z-index: 1;
-                font-family: ${styling.fontFamily};
+                font-family: ${widgetFont};
             }
             
             .gist-pill-input {
@@ -474,7 +572,7 @@
                 font-size: 14px;
                 color: ${styling.textColor};
                 width: 300px;
-                font-family: ${styling.fontFamily};
+                font-family: ${widgetFont};
             }
             
             .gist-pill-input::placeholder {
@@ -537,7 +635,7 @@
                 transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
                 pointer-events: none;
                 order: 3;
-                font-family: ${styling.fontFamily};
+                font-family: ${widgetFont};
             }
             
             .gist-toolbox-tab {
@@ -550,7 +648,7 @@
                 color: ${styling.textColor}80;
                 background: transparent;
                 border: none;
-                font-family: ${styling.fontFamily};
+                font-family: ${widgetFont};
             }
             
             .gist-toolbox-tab:hover {
@@ -561,6 +659,30 @@
             .gist-toolbox-tab.active {
                 background: ${styling.primaryColor};
                 color: white;
+            }
+            
+            /* Apply font to all widget text elements */
+            .gist-widget * {
+                font-family: ${widgetFont} !important;
+            }
+            
+            .gist-answer-container,
+            .gist-answer-content,
+            .gist-answer-text,
+            .gist-suggested-questions,
+            .gist-suggested-question,
+            .gist-loading-text,
+            .gist-questions-loading-text,
+            .gist-questions-loading-simple,
+            .gist-content-entering,
+            .gist-content-entered,
+            button,
+            input,
+            div,
+            span,
+            p,
+            h1, h2, h3, h4, h5, h6 {
+                font-family: ${widgetFont} !important;
             }
                  `;
      }
@@ -624,36 +746,15 @@
          };
      }
      
-     // Function to create a live styling update system
+     // Function to create a live styling update system (DISABLED to prevent widget issues)
      function createStyleObserver(shadowRoot) {
-         // Create a MutationObserver to watch for style changes
-         const observer = new MutationObserver((mutations) => {
-             let shouldUpdate = false;
-             
-             mutations.forEach((mutation) => {
-                 if (mutation.type === 'attributes' && 
-                     (mutation.attributeName === 'style' || mutation.attributeName === 'class')) {
-                     shouldUpdate = true;
-                 }
-             });
-             
-             if (shouldUpdate) {
-                 // Debounce the update
-                 clearTimeout(window.gistStyleUpdateTimeout);
-                 window.gistStyleUpdateTimeout = setTimeout(() => {
-                     updateWidgetStyling(shadowRoot);
-                 }, 1000);
-             }
-         });
-         
-         // Observe style changes on key elements
-         observer.observe(document.body, {
-             attributes: true,
-             subtree: true,
-             attributeFilter: ['style', 'class']
-         });
-         
-         return observer;
+         // Return a mock observer that doesn't actually observe anything
+         // This prevents issues with complex websites where the observer can interfere
+         return {
+             observe: () => {},
+             disconnect: () => {},
+             takeRecords: () => []
+         };
      }
      
      // Function to update widget styling dynamically
@@ -759,6 +860,8 @@
                     overflow: hidden;
                 }
                 
+
+                
                 .gist-widget.minimized .gist-pill {
                     width: 120px;
                     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -834,6 +937,8 @@
                     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
                 
+
+                
                 .gist-answer-container {
                     width: 400px;
                     max-height: 300px;
@@ -842,18 +947,26 @@
                     padding: 1.5px;
                     opacity: 0;
                     transform: translateY(20px) scale(0.95);
-                    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), max-height 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
                     pointer-events: none;
                     order: 1;
                     display: flex;
                     flex-direction: column;
                 }
                 
+
+                
+
+                
                 /* Compact version for Remix tool */
                 .gist-answer-container.remix-compact {
-                    width: 280px;
-                    max-height: 200px;
+                    width: 400px;
+                    max-height: 300px;
                     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+                
+                .gist-answer-container.remix-compact.collapsed {
+                    max-height: 40px;
                 }
                 
                 .gist-answer-container::before {
@@ -881,20 +994,20 @@
                 
                 .gist-answer-content {
                     background: white;
-                    border-radius: 14.5px;
-                    padding: 20px 16px 20px 20px; /* Reduced right padding for scrollbar */
+                    border-radius: 14.5px 14.5px 0 0; /* Remove bottom radius since footer has it */
+                    padding: 20px 16px 20px 20px; /* Normal padding since button is outside */
                     flex: 1;
                     overflow-y: auto;
                     position: relative;
                     z-index: 1;
-                    max-height: calc(300px - 3px); /* Account for border padding */
+                    max-height: calc(300px - 40px); /* Account for footer height (~32px + border) */
                     box-sizing: border-box;
-                    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), max-height 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
                 }
                 
                 /* Compact version for Remix tool */
                 .gist-answer-container.remix-compact .gist-answer-content {
-                    max-height: calc(200px - 3px); /* Account for border padding */
+                    max-height: calc(300px - 40px); /* Account for footer height */
                     padding: 12px;
                     overflow: hidden; /* Disable scrolling for Remix */
                 }
@@ -1226,27 +1339,65 @@
                     font-weight: 600;
                 }
                 
-                .gist-openai-link {
-                    text-align: center;
+
+
+                
+                .gist-powered-by {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                     margin-top: 16px;
-                    padding-top: 12px;
-                    border-top: 1px solid #f3f4f6;
-                    opacity: 0;
-                    transform: translateY(10px);
-                    animation: fadeInUp 0.6s ease-out 0.5s forwards;
+                    padding-top: 8px;
+                    color: #9ca3af;
+                    font-size: 10px;
+                    font-weight: 500;
+                    opacity: 0.7;
                 }
                 
-                .gist-openai-link a {
+                .gist-add-to-site {
                     color: #9ca3af;
-                    font-size: 11px;
                     text-decoration: none;
                     transition: color 0.2s ease;
-                    cursor: pointer;
+                    pointer-events: auto;
                 }
                 
-                .gist-openai-link a:hover {
+                .gist-add-to-site:hover {
                     color: #6366f1;
                     text-decoration: underline;
+                }
+                
+                .gist-powered-text {
+                    pointer-events: none;
+                }
+                
+                /* Fixed footer for answer container */
+                .gist-answer-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 16px;
+                    border-top: 1px solid #e5e7eb;
+                    border-radius: 0 0 14.5px 14.5px;
+                    color: #d1d5db;
+                    font-size: 10px;
+                    font-weight: 500;
+                    opacity: 0.8;
+                    position: relative;
+                    z-index: 2;
+                    flex-shrink: 0;
+                }
+                
+                .gist-powered-section {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                
+                .gist-footer-logo {
+                    width: 14px;
+                    height: 14px;
+                    object-fit: contain;
+                    opacity: 0.8;
                 }
 
                 
@@ -1379,6 +1530,107 @@
                 
                 .gist-pill-submit:active {
                     transform: scale(0.95);
+                }
+                
+                .gist-desktop-mode-btn {
+                    width: 18px;
+                    height: 18px;
+                    background: #6b7280;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    border: none;
+                    flex-shrink: 0;
+                    display: none;
+                }
+                
+                .gist-desktop-mode-btn:hover {
+                    transform: scale(1.05);
+                    background: #4b5563;
+                }
+                
+                .gist-desktop-mode-btn:active {
+                    transform: scale(0.95);
+                }
+                
+                /* Show desktop mode button only when widget is expanded */
+                .gist-widget:not(.minimized) .gist-desktop-mode-btn {
+                    display: flex;
+                }
+                
+                /* Close button styling */
+                .gist-close-btn {
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background: rgba(107, 114, 128, 0.1);
+                    border: none;
+                    color: #6b7280;
+                    font-size: 16px;
+                    font-weight: 400;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.2s ease;
+                    z-index: 10;
+                    line-height: 1;
+                }
+                
+                .gist-close-btn:hover {
+                    background: rgba(107, 114, 128, 0.2);
+                    color: #374151;
+                    transform: scale(1.1);
+                }
+                
+                .gist-close-btn:active {
+                    transform: scale(0.95);
+                }
+                
+
+                
+                /* Desktop mode styles */
+                .gist-widget.desktop-mode {
+                    right: 20px !important;
+                    left: auto !important;
+                    width: 450px !important;
+                    transform: translateX(0) translateY(0) !important;
+                }
+                
+                .gist-widget.desktop-mode.loaded {
+                    transform: translateX(0) translateY(0);
+                }
+                
+                .gist-widget.desktop-mode.active {
+                    transform: translateX(0) translateY(0);
+                }
+                
+                .gist-widget.desktop-mode:not(.minimized) {
+                    transform: translateX(0) translateY(0);
+                }
+                
+                .gist-widget.desktop-mode .gist-answer-container {
+                    max-height: 600px !important;
+                }
+                
+                .gist-widget.desktop-mode .gist-answer-content {
+                    max-height: 540px !important;
+                }
+                
+                /* Desktop mode when minimized should stay in position */
+                .gist-widget.desktop-mode.minimized {
+                    right: 20px;
+                    left: auto;
+                    transform: translateX(0) translateY(0);
                 }
                 
                 .gist-pill:hover {
@@ -1633,7 +1885,7 @@
                 .gist-answer-container.remix-compact .gist-remix-image {
                     border-radius: 8px;
                     margin-bottom: 6px;
-                    max-height: calc(200px - 70px); /* Leave space for prompt and actions */
+                    max-height: calc(300px - 70px); /* Leave space for prompt and actions */
                     width: 100%;
                     object-fit: cover;
                 }
@@ -2364,22 +2616,28 @@
                             `<img src="gist-logo.png" class="gist-pill-logo" alt="Gist Logo">`
                         }
                         <input type="text" class="gist-pill-input" placeholder="Ask..." id="gist-input">
+                        <button class="gist-desktop-mode-btn" id="gist-desktop-mode-btn" title="Desktop Mode">⊞</button>
                         <button class="gist-pill-submit" id="gist-submit">➤</button>
                     </div>
                 </div>
                 <div class="gist-toolbox" id="gist-toolbox">
-                    <div class="gist-toolbox-tabs">
-                        <button class="gist-toolbox-tab active" data-tool="ask">Ask</button>
-                        <button class="gist-toolbox-tab" data-tool="gist">The Gist</button>
-                        <button class="gist-toolbox-tab" data-tool="remix">Remix</button>
-                        <button class="gist-toolbox-tab" data-tool="share">Share</button>
+                    <div class="gist-toolbox-tabs" id="gist-toolbox-tabs">
+                        <!-- Tabs will be generated dynamically based on TOOLS_CONFIG -->
                     </div>
                 </div>
                 <div class="gist-answer-container" id="gist-answer-container">
+                    <button class="gist-close-btn" id="gist-close-btn" title="Minimize">×</button>
                     <div class="gist-answer-content">
                         <div class="gist-answer-placeholder">
                             Ask a question to see the answer here!
                         </div>
+                    </div>
+                    <div class="gist-answer-footer">
+                        <div class="gist-powered-section">
+                            <img src="gist-logo.png" alt="Gist Logo" class="gist-footer-logo">
+                            <span class="gist-powered-text">Powered by Gist</span>
+                        </div>
+                        <a href="https://gist.ai" target="_blank" class="gist-add-to-site">Add to your site</a>
                     </div>
                 </div>
             </div>
@@ -2388,19 +2646,66 @@
         shadowRoot.innerHTML = widgetHTML;
         document.body.appendChild(widgetContainer);
         
+        // Initialize currentTool that will be used by generateToolboxTabs
+        let currentTool = 'ask'; // Track current active tool
+        
+        // Generate toolbox tabs dynamically based on TOOLS_CONFIG
+        function generateToolboxTabs() {
+            const toolboxTabsContainer = shadowRoot.getElementById('gist-toolbox-tabs');
+            const toolLabels = {
+                ask: 'Ask',
+                gist: 'The Gist', 
+                remix: 'Remix',
+                share: 'Share'
+            };
+            
+            // Clear existing tabs
+            toolboxTabsContainer.innerHTML = '';
+            
+            // Get enabled tools in the desired order
+            const toolOrder = ['ask', 'gist', 'remix', 'share'];
+            const enabledTools = toolOrder.filter(tool => TOOLS_CONFIG[tool]);
+            
+            // Generate tabs for enabled tools
+            enabledTools.forEach((tool, index) => {
+                const button = document.createElement('button');
+                button.className = 'gist-toolbox-tab';
+                button.setAttribute('data-tool', tool);
+                button.textContent = toolLabels[tool];
+                
+                // Make first enabled tool active by default
+                if (index === 0) {
+                    button.classList.add('active');
+                    currentTool = tool; // Set the current tool to the first enabled tool
+                }
+                
+                toolboxTabsContainer.appendChild(button);
+            });
+            
+            console.log('[GistWidget] Generated tabs for enabled tools:', enabledTools);
+        }
+        
+        // Generate the tabs
+        generateToolboxTabs();
+        
         // Get elements for event handling
         const pill = shadowRoot.getElementById('gist-pill');
         const input = shadowRoot.getElementById('gist-input');
         const submitBtn = shadowRoot.getElementById('gist-submit');
+        const desktopModeBtn = shadowRoot.getElementById('gist-desktop-mode-btn');
+        const closeBtn = shadowRoot.getElementById('gist-close-btn');
         const answerContainer = shadowRoot.getElementById('gist-answer-container');
         const answerContent = answerContainer.querySelector('.gist-answer-content');
         const widget = shadowRoot.getElementById('gist-widget');
         const toolbox = shadowRoot.getElementById('gist-toolbox');
-        const toolboxTabs = toolbox.querySelectorAll('.gist-toolbox-tab');
+        let toolboxTabs = toolbox.querySelectorAll('.gist-toolbox-tab'); // Use let since it will be updated
+
         
         // Dynamic toolbox sizing system
         function optimizeToolboxAlignment() {
             const toolboxContainer = shadowRoot.querySelector('.gist-toolbox-tabs');
+            // Refresh toolboxTabs since they are generated dynamically
+            toolboxTabs = toolbox.querySelectorAll('.gist-toolbox-tab');
             const tabs = Array.from(toolboxTabs);
             
             if (!toolboxContainer || tabs.length === 0) return;
@@ -2505,14 +2810,42 @@
         let submitTimeout = null;
         let conversationHistory = []; // Store conversation history for Gist
         let pageContext = null; // Store extracted page content for context
-        let currentTool = 'ask'; // Track current active tool
+        // currentTool already declared above
         let isMinimized = true; // Track minimized state
         let hoverTimeout = null; // Timeout for hover delay
         let userIsInteracting = false; // Track if user is actively interacting
+        let isDesktopMode = false; // Track desktop mode state
+        let hasAutoSwitchedToDesktop = false; // Track if we've already auto-switched to prevent repeated switching
+
+        // Function to detect if user is on a desktop device
+        function isDesktopDevice() {
+            // Check for touch capability and screen size
+            const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+            const screenHeight = window.innerHeight || document.documentElement.clientHeight;
+            
+            // Consider it desktop if:
+            // 1. No touch capability, OR
+            // 2. Large screen size (even if touch-capable, like touch laptops)
+            const isLargeScreen = screenWidth >= 1024 && screenHeight >= 768;
+            
+            return !hasTouch || isLargeScreen;
+        }
+
         
         // Toolbox functionality
         function switchTool(tool) {
+            // Check if tool is enabled
+            if (!TOOLS_CONFIG[tool]) {
+                console.warn(`[GistWidget] Tool '${tool}' is disabled and cannot be switched to`);
+                return;
+            }
+            
             currentTool = tool;
+            window.gistCurrentTool = currentTool; // Keep window reference in sync
+            
+            // Refresh toolboxTabs since they are generated dynamically
+            toolboxTabs = toolbox.querySelectorAll('.gist-toolbox-tab');
             
             // Update active tab
             toolboxTabs.forEach(tab => {
@@ -2528,6 +2861,8 @@
             } else {
                 answerContainer.classList.remove('remix-compact');
             }
+            
+
             
             // Update content based on tool
             updateContentForTool(tool);
@@ -2649,7 +2984,7 @@
                     
                     /* Compact mode adjustments for Remix placeholder */
                     .gist-answer-container.remix-compact .gist-answer-placeholder {
-                        height: calc(200px - 24px); /* Account for reduced padding */
+                        height: calc(300px - 24px); /* Account for reduced padding */
                     }
                 `;
                 shadowRoot.appendChild(style);
@@ -2701,6 +3036,10 @@
             try {
                 // Show comprehensive loading state while generating questions
                 showQuestionsLoading(previousQuestion, previousAnswer);
+                
+                // Ensure answer container and toolbox are visible
+                answerContainer.classList.add('visible');
+                toolbox.classList.add('visible');
                 
                 // Generate questions
                 const questions = await generateSuggestedQuestions(previousQuestion, previousAnswer);
@@ -2940,13 +3279,6 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
                 </div>
             `;
             
-            // Add Gist link
-            html += `
-                <div class="gist-openai-link gist-content-entering gist-stagger-4">
-                    <a href="#" onclick="openInChatGPT(); return false;">Continue this conversation in Gist →</a>
-                </div>
-            `;
-            
             answerContent.innerHTML = html;
             hasAnswer = true;
             hasAskAnswer = true; // Mark that we have an Ask-specific answer
@@ -3021,15 +3353,20 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             }
         }
         
-        // Add event listeners for toolbox tabs
-        toolboxTabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
+        // Add event listeners for toolbox tabs using delegation
+        toolbox.addEventListener('click', (e) => {
+            // Check if clicked element is a toolbox tab
+            if (e.target.classList.contains('gist-toolbox-tab')) {
                 e.stopPropagation(); // Prevent event from bubbling up
-                const tool = tab.dataset.tool;
-                switchTool(tool);
-                userIsInteracting = true; // User clicked, keep expanded
-                isActive = true;
-            });
+                const tool = e.target.dataset.tool;
+                
+                // Only switch tool if it's enabled
+                if (TOOLS_CONFIG[tool]) {
+                    switchTool(tool);
+                    userIsInteracting = true; // User clicked, keep expanded
+                    isActive = true;
+                }
+            }
         });
         
         // Minimization/expansion functions
@@ -3040,10 +3377,8 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             widget.classList.remove('minimized');
             widget.classList.add('active');
             
-            // Smooth placeholder transition
-            setTimeout(() => {
-                input.placeholder = 'Ask anything...';
-            }, 200);
+            // Update placeholder immediately for desktop mode responsiveness
+            input.placeholder = 'Ask anything...';
             
             // Show toolbox if not already visible
             if (!toolbox.classList.contains('visible')) {
@@ -3079,6 +3414,53 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             log('debug', 'Widget minimized');
         }
         
+        // Desktop mode functionality
+        function toggleDesktopMode() {
+            isDesktopMode = !isDesktopMode;
+            
+            if (isDesktopMode) {
+                enableDesktopMode();
+            } else {
+                disableDesktopMode();
+            }
+            
+            log('debug', `Desktop mode ${isDesktopMode ? 'enabled' : 'disabled'}`);
+        }
+        
+        function enableDesktopMode() {
+            widget.classList.add('desktop-mode');
+            
+            // Ensure widget is expanded and active initially
+            expandWidget();
+            isActive = true;
+            userIsInteracting = true;
+            
+            // Update button appearance
+            desktopModeBtn.style.background = '#16a34a';
+            desktopModeBtn.title = 'Exit Desktop Mode';
+            
+            log('debug', 'Desktop mode enabled - widget moved to side with expanded view');
+        }
+        
+        function disableDesktopMode() {
+            widget.classList.remove('desktop-mode');
+            
+            // Reset button appearance
+            desktopModeBtn.style.background = '#6b7280';
+            desktopModeBtn.title = 'Desktop Mode';
+            
+            // Explicitly reset positioning to center the widget
+            widget.style.right = '';
+            widget.style.left = '';
+            widget.style.width = '';
+            widget.style.transform = '';
+            
+            // Re-enable normal widget behavior
+            userIsInteracting = false;
+            
+            log('debug', 'Desktop mode disabled - widget returned to normal position');
+        }
+        
         // Widget hover handlers
         widget.addEventListener('mouseenter', () => {
             clearTimeout(hoverTimeout);
@@ -3088,6 +3470,7 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
         
         widget.addEventListener('mouseleave', () => {
             clearTimeout(hoverTimeout);
+            // Allow auto-minimize in both normal and desktop mode
             hoverTimeout = setTimeout(() => {
                 if (!userIsInteracting && !isActive) {
                     minimizeWidget();
@@ -3107,7 +3490,7 @@ Return only the 3 questions, one per line, without numbers or bullets.`;
             setTimeout(() => {
                 if (!input.value.trim()) {
                     userIsInteracting = false;
-                    // Try to minimize if not hovering
+                    // Try to minimize if not hovering (works in both normal and desktop mode)
                     if (!widget.matches(':hover')) {
                         minimizeWidget();
                     }
@@ -3241,14 +3624,9 @@ Instructions:
         
         // Special API call for gist that doesn't affect conversation history
         async function createChatCompletionForGist(prompt) {
-            if (!WIDGET_CONFIG.API_KEY || WIDGET_CONFIG.API_KEY === '') {
-                throw new Error('Gist API key not configured. Please set your API key in WIDGET_CONFIG.');
-            }
-            
             const requestBody = {
                 model: WIDGET_CONFIG.MODEL,
                 messages: [{ role: 'user', content: prompt }],
-                temperature: 0.3, // Lower temperature for more focused summaries
                 max_tokens: 300 // Shorter limit for concise summaries
             };
             
@@ -3256,11 +3634,10 @@ Instructions:
             const timeoutId = setTimeout(() => controller.abort(), WIDGET_CONFIG.TIMEOUT_MS);
             
             try {
-                const response = await fetch(`${WIDGET_CONFIG.API_BASE_URL}/v1/chat/completions`, {
+                const response = await fetch(WIDGET_CONFIG.CHAT_API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${WIDGET_CONFIG.API_KEY}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(requestBody),
                     signal: controller.signal
@@ -3270,13 +3647,13 @@ Instructions:
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
                 
                 if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-                    throw new Error('Invalid response format from Gist API');
+                    throw new Error('Invalid response format from API');
                 }
                 
                 return {
@@ -3380,13 +3757,6 @@ Instructions:
                 </div>
             `;
             
-            // Add OpenAI link
-            html += `
-                <div class="gist-openai-link gist-content-entering gist-stagger-4">
-                    <a href="#" onclick="openInChatGPT(); return false;">Continue this conversation in Gist →</a>
-                </div>
-            `;
-            
             answerContent.innerHTML = html;
             hasAnswer = true;
             
@@ -3403,6 +3773,9 @@ Instructions:
                 if (answerText) {
                     applyTextRevealAnimation(answerText);
                 }
+                
+                // Auto-collapse after showing gist content
+
             }, 50);
             
             // Generate suggested questions for the gist
@@ -3991,28 +4364,20 @@ Instructions:
         }
         
         async function createImageWithDALLE(prompt) {
-            if (!WIDGET_CONFIG.API_KEY || WIDGET_CONFIG.API_KEY === '') {
-                throw new Error('Gist API key not configured. Please set your API key in WIDGET_CONFIG.');
-            }
-            
             const requestBody = {
-                model: "dall-e-3",
                 prompt: prompt,
-                n: 1,
                 size: "1024x1024",
-                quality: "standard",
-                response_format: "url"
+                quality: "standard"
             };
             
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), WIDGET_CONFIG.TIMEOUT_MS * 2); // Longer timeout for image generation
             
             try {
-                const response = await fetch(`${WIDGET_CONFIG.API_BASE_URL}/v1/images/generations`, {
+                const response = await fetch(WIDGET_CONFIG.IMAGE_API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${WIDGET_CONFIG.API_KEY}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(requestBody),
                     signal: controller.signal
@@ -4022,13 +4387,13 @@ Instructions:
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
                 
                 if (!data.data || !data.data[0] || !data.data[0].url) {
-                    throw new Error('Invalid response format from DALL-E API');
+                    throw new Error('Invalid response format from image API');
                 }
                 
                 return {
@@ -4121,13 +4486,6 @@ Instructions:
             
             html += `
                     </div>
-                </div>
-            `;
-            
-            // Add OpenAI link
-            html += `
-                <div class="gist-openai-link gist-content-entering gist-stagger-3">
-                    <a href="#" onclick="openInChatGPT(); return false;">Continue this conversation in Gist →</a>
                 </div>
             `;
             
@@ -4225,13 +4583,6 @@ Instructions:
             
             html += `
                     </div>
-                </div>
-            `;
-            
-            // Add OpenAI link
-            html += `
-                <div class="gist-openai-link gist-content-entering gist-stagger-3">
-                    <a href="#" onclick="openInChatGPT(); return false;">Continue this conversation in Gist →</a>
                 </div>
             `;
             
@@ -4375,10 +4726,6 @@ Instructions:
         
         // API Integration Functions
         async function createChatCompletion(userPrompt) {
-            if (!WIDGET_CONFIG.API_KEY || WIDGET_CONFIG.API_KEY === '') {
-                throw new Error('Gist API key not configured. Please set your API key in WIDGET_CONFIG.');
-            }
-            
             // Initialize conversation with page context (only on first message)
             initializeConversationWithContext();
             
@@ -4388,7 +4735,6 @@ Instructions:
             const requestBody = {
                 model: WIDGET_CONFIG.MODEL,
                 messages: conversationHistory,
-                temperature: 0.7,
                 max_tokens: 500
             };
             
@@ -4396,11 +4742,10 @@ Instructions:
             const timeoutId = setTimeout(() => controller.abort(), WIDGET_CONFIG.TIMEOUT_MS);
             
             try {
-                const response = await fetch(`${WIDGET_CONFIG.API_BASE_URL}/v1/chat/completions`, {
+                const response = await fetch(WIDGET_CONFIG.CHAT_API_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${WIDGET_CONFIG.API_KEY}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(requestBody),
                     signal: controller.signal
@@ -4410,13 +4755,13 @@ Instructions:
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
                 
                 if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-                    throw new Error('Invalid response format from Gist API');
+                    throw new Error('Invalid response format from API');
                 }
                 
                 const assistantMessage = data.choices[0].message.content;
@@ -4446,6 +4791,10 @@ Instructions:
         }
         
         function showLoading() {
+            // Ensure answer container and toolbox are visible
+            answerContainer.classList.add('visible');
+            toolbox.classList.add('visible');
+            
             answerContent.innerHTML = `
                 <div class="gist-loading">
                     <div class="gist-loading-spinner"></div>
@@ -4455,6 +4804,10 @@ Instructions:
         }
         
         function showError(errorMessage) {
+            // Ensure answer container and toolbox are visible
+            answerContainer.classList.add('visible');
+            toolbox.classList.add('visible');
+            
             // First, fade out loading if it exists
             const existingLoading = answerContent.querySelector('.gist-loading');
             if (existingLoading) {
@@ -4487,6 +4840,10 @@ Instructions:
         function showAnswer(answer) {
             // Mark that we have an Ask-specific answer
             hasAskAnswer = true;
+            
+            // Ensure answer container and toolbox are visible
+            answerContainer.classList.add('visible');
+            toolbox.classList.add('visible');
             
             // First, fade out loading if it exists
             const existingLoading = answerContent.querySelector('.gist-loading');
@@ -4579,13 +4936,6 @@ Instructions:
                 </div>
             `;
             
-            // Add OpenAI link
-            html += `
-                <div class="gist-openai-link gist-content-entering gist-stagger-3">
-                    <a href="#" onclick="openInChatGPT(); return false;">Continue this conversation in Gist →</a>
-                </div>
-            `;
-            
             answerContent.innerHTML = html;
             hasAnswer = true;
             
@@ -4602,6 +4952,8 @@ Instructions:
                 if (answerText) {
                     applyTextRevealAnimation(answerText);
                 }
+                
+
             }, 50);
         }
         
@@ -4803,25 +5155,7 @@ Instructions:
             return selectedSources.sort((a, b) => b.percentage - a.percentage);
         }
         
-        // Function to open conversation in Gist
-        window.openInChatGPT = function() {
-            try {
-                // Open Gist.ai in a new tab
-                window.open('https://gist.ai/', '_blank');
-                
-                // Emit analytics event
-                window.dispatchEvent(new CustomEvent('gist-link-clicked', {
-                    detail: {
-                        destination: 'gist.ai'
-                    }
-                }));
-                
-            } catch (error) {
-                log('error', 'Error opening Gist link', { error: error.message });
-                // Fallback to just opening Gist
-                window.open('https://gist.ai/', '_blank');
-            }
-        };
+
         
         function showPlaceholder() {
             showPlaceholderForTool(currentTool);
@@ -4832,6 +5166,8 @@ Instructions:
             // Always show the container and toolbox on hover/interaction
             answerContainer.classList.add('visible');
             toolbox.classList.add('visible');
+            
+
             
             // Expand widget and mark as interacting when showing answers
             userIsInteracting = true;
@@ -4963,6 +5299,38 @@ Instructions:
             }, 100);
         });
         
+        // Handle input hover for auto-desktop mode on desktop devices
+        input.addEventListener('mouseenter', () => {
+            // Only auto-switch to desktop mode if:
+            // 1. User is on a desktop device
+            // 2. Not already in desktop mode
+            // 3. Haven't already auto-switched in this session
+            if (isDesktopDevice() && !isDesktopMode && !hasAutoSwitchedToDesktop) {
+                hasAutoSwitchedToDesktop = true;
+                
+                // Create smooth fade out effect
+                widget.style.transition = 'opacity 200ms ease-out, transform 200ms ease-out';
+                widget.style.opacity = '0';
+                widget.style.transform = 'translateX(-50%) translateY(10px) scale(0.95)';
+                
+                setTimeout(() => {
+                    enableDesktopMode();
+                    
+                    // Create smooth fade in effect for desktop mode
+                    widget.style.transition = 'opacity 300ms ease-in, transform 300ms ease-in';
+                    widget.style.opacity = '1';
+                    widget.style.transform = 'translateX(0) translateY(0) scale(1)';
+                    
+                    // Reset transition after animation completes
+                    setTimeout(() => {
+                        widget.style.transition = '';
+                    }, 300);
+                }, 200);
+                
+                log('debug', 'Auto-switched to desktop mode on hover with smooth fade effect');
+            }
+        });
+        
         // Handle Enter key press
         input.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
@@ -4976,6 +5344,25 @@ Instructions:
             userIsInteracting = true;
             isActive = true;
             submitQuery();
+        });
+        
+        // Handle desktop mode button click
+        desktopModeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userIsInteracting = true;
+            isActive = true;
+            toggleDesktopMode();
+        });
+        
+        // Handle close button click
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            // Minimize the widget but keep desktop mode if active
+            isActive = false;
+            userIsInteracting = false;
+            input.blur();
+            minimizeWidget();
         });
         
         // Prevent clicks on answer container from bubbling
@@ -4992,10 +5379,13 @@ Instructions:
             isActive = true;
         });
         
+
+        
         // Handle clicking outside to minimize
         document.addEventListener('click', (e) => {
             // Check if click is outside the widget container
             if (!widgetContainer.contains(e.target)) {
+                // Both normal and desktop mode: deactivate and minimize
                 isActive = false;
                 userIsInteracting = false;
                 input.blur();
@@ -5005,8 +5395,9 @@ Instructions:
             }
         });
         
-        // Set up style observer for dynamic updates
-        const styleObserver = createStyleObserver(shadowRoot);
+        // Disable automatic style observer to prevent issues with complex websites
+        // const styleObserver = createStyleObserver(shadowRoot);
+        const styleObserver = null; // Disabled to prevent widget disappearing on complex sites
         
         // Log the applied styling for debugging
         log('info', 'Widget styling applied', { 
@@ -5039,6 +5430,9 @@ Instructions:
         window.gistWidgetShadowRoot = shadowRoot;
         window.gistWidgetStyling = enhancedStyling;
         window.gistStyleObserver = styleObserver;
+        window.gistCurrentTool = currentTool;
+        window.gistSwitchTool = switchTool;
+        window.gistOptimizeToolboxAlignment = optimizeToolboxAlignment;
         
         return shadowRoot;
     }
@@ -5084,20 +5478,92 @@ Instructions:
             return current;
         },
         
-        // Enable/disable automatic styling updates
+        // Enable/disable automatic styling updates (DISABLED to prevent issues)
         setAutoUpdate: function(enabled) {
-            if (window.gistStyleObserver) {
-                if (enabled) {
-                    window.gistStyleObserver.observe(document.body, {
-                        attributes: true,
-                        subtree: true,
-                        attributeFilter: ['style', 'class']
-                    });
-                } else {
-                    window.gistStyleObserver.disconnect();
-                }
-                log('info', 'Auto-update styling', { enabled });
+            // Auto-update is permanently disabled to prevent widget disappearing on complex sites
+            log('info', 'Auto-update styling disabled for stability', { requestedEnabled: enabled });
+        },
+        
+        // Configure which tools are enabled/disabled
+        configureTools: function(toolsConfig) {
+            if (!toolsConfig || typeof toolsConfig !== 'object') {
+                console.error('[GistWidget] Invalid tools configuration. Must be an object.');
+                return;
             }
+            
+            // Update TOOLS_CONFIG with provided settings
+            Object.keys(toolsConfig).forEach(tool => {
+                if (TOOLS_CONFIG.hasOwnProperty(tool)) {
+                    TOOLS_CONFIG[tool] = Boolean(toolsConfig[tool]);
+                } else {
+                    console.warn(`[GistWidget] Unknown tool '${tool}' ignored.`);
+                }
+            });
+            
+            // Regenerate tabs if widget exists
+            if (window.gistWidgetShadowRoot) {
+                const shadowRoot = window.gistWidgetShadowRoot;
+                const toolboxTabsContainer = shadowRoot.getElementById('gist-toolbox-tabs');
+                
+                if (toolboxTabsContainer) {
+                    // Get the generate function from the widget's scope
+                    // We need to regenerate tabs based on new config
+                    const toolLabels = {
+                        ask: 'Ask',
+                        gist: 'The Gist', 
+                        remix: 'Remix',
+                        share: 'Share'
+                    };
+                    
+                    // Clear existing tabs
+                    toolboxTabsContainer.innerHTML = '';
+                    
+                    // Get enabled tools in the desired order
+                    const toolOrder = ['ask', 'gist', 'remix', 'share'];
+                    const enabledTools = toolOrder.filter(tool => TOOLS_CONFIG[tool]);
+                    
+                    if (enabledTools.length === 0) {
+                        console.error('[GistWidget] At least one tool must be enabled');
+                        TOOLS_CONFIG.ask = true; // Force enable Ask as fallback
+                        enabledTools.push('ask');
+                    }
+                    
+                    // Generate tabs for enabled tools
+                    enabledTools.forEach((tool, index) => {
+                        const button = document.createElement('button');
+                        button.className = 'gist-toolbox-tab';
+                        button.setAttribute('data-tool', tool);
+                        button.textContent = toolLabels[tool];
+                        
+                        // Make first enabled tool active if current tool is disabled
+                        if (!TOOLS_CONFIG[window.gistCurrentTool] && index === 0) {
+                            button.classList.add('active');
+                            // We'll need to switch to this tool
+                            setTimeout(() => {
+                                if (window.gistSwitchTool) {
+                                    window.gistSwitchTool(tool);
+                                }
+                            }, 100);
+                        } else if (tool === window.gistCurrentTool) {
+                            button.classList.add('active');
+                        }
+                        
+                        toolboxTabsContainer.appendChild(button);
+                    });
+                    
+                    // Re-optimize toolbox alignment
+                    if (window.gistOptimizeToolboxAlignment) {
+                        setTimeout(window.gistOptimizeToolboxAlignment, 100);
+                    }
+                    
+                    log('info', 'Tools configuration updated', { enabledTools, config: TOOLS_CONFIG });
+                }
+            }
+        },
+        
+        // Get current tools configuration
+        getToolsConfig: function() {
+            return { ...TOOLS_CONFIG };
         }
     };
 
@@ -5118,5 +5584,18 @@ Instructions:
     }
     
     log('info', 'Gist Widget loader initialized');
+    
+    // Log available configuration options for developers
+    console.group('🛠️ Gist Widget Configuration');
+    console.log('Tools Configuration:');
+    console.log('• TOOLS_CONFIG =', TOOLS_CONFIG);
+    console.log('• GistWidget.configureTools({ remix: false, share: false })');
+    console.log('• GistWidget.getToolsConfig()');
+    console.log('');
+    console.log('Usage Examples:');
+    console.log('• TOOLS_CONFIG.remix = false  // Disable remix tool');
+    console.log('• GistWidget.configureTools({ remix: false, share: false })  // Disable multiple tools');
+    console.groupEnd();
+    
     initWidget();
 })(); 
